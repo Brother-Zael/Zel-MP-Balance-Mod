@@ -1,13 +1,14 @@
 ﻿l_english:
  unconditional_surrender: "Unconditional Surrender"
  unconditional_surrender_desc: "Give [recipient.GetName] occupation in all unoccupied land owned by you and in any of your vassals in this war."
- unconditional_surrender_act: "Unconditional surrender act" #Needed?
- unconditional_surrender_desc_occupation: "[uncon_sending_nation.GetNameWithFlag] will be fully occupied by [recipient.GetNameWithFlag]"
- unconditional_surrender_effect_text: "Unconditional surrender effect text" #Needed?
- unconditional_surrender_effect_text_past: "Unconditional surrender effect text past" #Needed?
  unconditional_surrender_reason: "We cannot surrender in the first 12 months of a war."
- PROPOSE_unconditional_surrender: "PROPOSE unconditional surrender" #Needed?
- dip_unconditional_surrender_CATEGORY: "Dip unconditional surrender CATEGORY" #Needed?
-
-
-
+ unconditional_surrender_act: "Give [recipient.GetName] occupation in all unoccupied land owned by you and in any of your vassals in this war."
+ choce_war_surrender: "Chose war to surrender"
+ 
+ unconditional_surrender_effect_desc: "[uncon_sending_nation.GetNameWithFlag] will be fully occupied by [recipient.GetNameWithFlag]"
+ 
+ ## Log Messages if missing but have not seen them ingame
+ unconditional_surrender_effect_text: "Unconditional surrender effect text"
+ unconditional_surrender_effect_text_past: "Unconditional surrender effect text past"
+ PROPOSE_unconditional_surrender: "PROPOSE unconditional surrender"
+ dip_unconditional_surrender_CATEGORY: "Dip unconditional surrender CATEGORY"

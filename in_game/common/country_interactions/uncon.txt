@@ -1,102 +1,122 @@
 ﻿unconditional_surrender = {
-    type = diplomacy
-    category = CATEGORY_HOSTILE_ACTIONS
-    
-    show_message = no
-    show_message_to_target = no
-    block_when_at_war = no
-    use_enroute = no
-    
-    potential = {
-        scope:actor = {
-            hidden_trigger = { is_ai = no }
-            any_current_war = {
-                scope:actor = { is_war_leader_of = prev }
-                scope:recipient = { is_war_leader_of = prev }
-            }
-        }
-    }
-    
-    allow = {
-        scope:actor = {
-            any_current_war = {
-                scope:actor = { is_war_leader_of = prev }
-                scope:recipient = { is_war_leader_of = prev }
-
-                war_length > 12
-            }
-        }
-    }
-    
-    select_trigger = {
-        looking_for_a = country
-        target_flag = recipient
-        interaction_source_list = {
-            scope:actor = {
-                every_country_at_war_with = {
-                    add_to_list = source
-                }
-            }
-        }
-        name = "choose_country"
-        column = {
-            data = name
-        }
-        visible = {
-        }
-        enabled = {
-            scope:actor = {
-                any_current_war = {
-                    prev = { is_war_leader_of = prev }
-                    root = { is_war_leader_of = prev }
-                    war_length > 12
-                }
-            }
-        }
-    }
-    
-    effect = {
-        if = {
-            limit = { exists = scope:recipient }
-            scope:actor = {
-                random_current_war = {
-                    limit = {
-                        scope:actor = { is_war_leader_of = prev }
-                        scope:recipient = { is_war_leader_of = prev }
-                    }
-                    if = {
-                        limit = { attacker_leader = scope:actor }
-                        every_attacker = {
-                            limit = {
-                                or = {
-                                    this = scope:actor
-                                    is_subject_or_below_of = scope:actor
-                                }
-                            }
-                            every_controlled_location = {
-                                limit = { controller = owner }
-                                transfer_location_occupation = scope:recipient
-                            }
-                        }
-                    }
-                    else_if = {
-                        limit = { defender_leader = scope:actor }
-                        every_defender = {
-                            limit = {
-                                or = {
-                                    this = scope:actor
-                                    is_subject_or_below_of = scope:actor
-                                }
-                            }
-                            every_controlled_location = {
-                                limit = { controller = owner }
-                                transfer_location_occupation = scope:recipient
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        else = { custom_tooltip = explain_uncon_surrender_effect_tt }    #Localize this
-    }
+	type = diplomacy
+	category = CATEGORY_HOSTILE_ACTIONS
+	
+	show_message = no
+	show_message_to_target = no
+	block_when_at_war = no
+	use_enroute = no
+	
+	potential = {
+		scope:actor = {
+			hidden_trigger = { is_ai = no }
+			any_current_war = {
+				scope:actor = { is_war_leader_of = prev }
+				scope:recipient = { is_war_leader_of = prev }
+			}
+		}
+	}
+	
+	allow = {
+		scope:actor = {
+			hidden_trigger = { is_ai = no }
+			"war_with_country(scope:recipient)" = {
+				hidden_trigger = {
+					or = {
+						attacker_leader = scope:actor
+						defender_leader = scope:actor
+					}
+					or = {
+						attacker_leader = scope:recipient
+						defender_leader = scope:recipient
+					}
+				}
+				
+				war_length > 12
+			}
+		}
+	}
+	
+	select_trigger = {
+		looking_for_a = country
+		target_flag = recipient
+		interaction_source_list = {
+			scope:actor = {
+				every_country_at_war_with = {
+					add_to_list = source
+				}
+			}
+		}
+		name = "choose_country"
+		column = {
+			data = name
+		}
+		visible = {
+		}
+		enabled = {
+			hidden_trigger = {
+				scope:actor = { 
+					any_current_war = {
+						prev = { is_war_leader_of = prev }
+						root = { is_war_leader_of = prev }
+						war_length > 12
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = { exists = scope:recipient }
+			scope:actor = {
+				random_current_war = {
+					limit = {
+						scope:actor = { is_war_leader_of = prev }
+						scope:recipient = { is_war_leader_of = prev }
+					}
+					if = {
+						limit = { attacker_leader = scope:actor }
+						every_attacker = {
+							limit = {
+								or = {
+									this = scope:actor
+									is_subject_or_below_of = scope:actor
+								}
+							}
+							save_scope_as = uncon_sending_nation
+							custom_tooltip = unconditional_surrender_effect_desc
+							hidden_effect = {
+								every_controlled_location = {
+									limit = { controller = owner }
+									transfer_location_occupation = scope:recipient
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = { defender_leader = scope:actor }
+						every_defender = {
+							limit = {
+								or = {
+									this = scope:actor
+									is_subject_or_below_of = scope:actor
+								}
+							}
+							save_scope_as = uncon_sending_nation
+							custom_tooltip = unconditional_surrender_effect_desc
+							hidden_effect = {
+								every_controlled_location = {
+									limit = { controller = owner }
+									transfer_location_occupation = scope:recipient
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	ai_tick = never
 }
