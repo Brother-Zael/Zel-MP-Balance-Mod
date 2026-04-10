@@ -84,7 +84,7 @@
 									is_subject_or_below_of = scope:actor
 								}
 							}
-							save_scope_as = uncon_sending_nation
+							save_temporary_scope_as = uncon_sending_nation
 							custom_tooltip = unconditional_surrender_effect_desc
 							hidden_effect = {
 								every_controlled_location = {
@@ -103,7 +103,7 @@
 									is_subject_or_below_of = scope:actor
 								}
 							}
-							save_scope_as = uncon_sending_nation
+							save_temporary_scope_as = uncon_sending_nation
 							custom_tooltip = unconditional_surrender_effect_desc
 							hidden_effect = {
 								every_controlled_location = {
