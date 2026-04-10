@@ -1,0 +1,46 @@
+﻿namespace = buff_epi
+buff_epi.1 = {
+	type = country_event
+	title = buff.1.title
+	desc = buff.1.desc
+	fire_only_once = yes
+	
+	dynamic_historical_event = {
+		tag = EPI
+		from = 1337.4.4
+		to = 1340.1.1
+		monthly_chance = 30
+	}
+
+	illustration_tags = {
+        10 = happy
+        10 = interior
+    }
+
+	immediate = {
+		set_capital = location:preveza
+		capital = {
+			save_scope_as = target_location
+		}
+	}
+	
+	option = {
+		name = buff.1.a
+		scope:target_location = {
+			random_pop = {
+				limit = {
+					owner = root
+					pop_type = pop_type:peasants
+				}
+				add_pop_size = {
+					value = pop_size
+					multiply = 8.0
+				}
+			}
+		}
+		
+		add_gold = {
+			value = 2000
+		}		
+	}
+}

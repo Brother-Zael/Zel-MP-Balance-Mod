@@ -1,0 +1,101 @@
+current_age = age_1_traditions
+
+# own_control_core
+# own_control_integrated
+# own_control_conquered
+# own_control_colony
+# own_core
+# own_conquered
+# own_integrated
+# own_colony
+# control_core
+# control
+# our_cores_conquered_by_others
+
+countries = {
+	countries = {
+
+	POR = {
+		own_control_core = {
+			lagos faro silves tavira
+			evora alvalade alvito avis beja crato elvas estremoz mertola montemor mora_portugal moura odemira ourique ponte_sor portalegre portel salvaterra serpa sines vila_vicosa
+			coimbra besteiros castelo_branco covilha esgueira feira guarda idanha lamego meda pinhel proenca_nova sabugal seia trancoso viseu
+			lisbon alcacer_do_sal alcobaca chao_de_couce figueira leiria santarem setubal tomar torres_novas torres_vedras
+			porto aguiar barcelos braga guimaraes montalegre valenca viana_do_castelo
+			braganca chaves macedo miranda_de_i_douro mirandela moncorvo vila_real
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "expl_silk_road_center"
+		include = "expl_silk_road_east"
+		include = "expl_indian_trade_route"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+			ruler = por_afonso_iv_portugal
+
+			ruler_term = { character = lon_ramiro_ii_leon start_date = 926.2.12 end_date = 931.11.6 regnal_number = 0 }
+
+			ruler_term = { character = por_afonso_i_portugal start_date = 1143.10.5 end_date = 1185.12.6 regnal_number = 1 }
+			ruler_term = { character = por_sancho_i_portugal start_date = 1185.12.6 end_date = 1211.3.26 regnal_number = 1 }
+			ruler_term = { character = por_afonso_ii_portugal start_date = 1211.3.26 end_date = 1223.3.25 regnal_number = 2 }
+			ruler_term = { character = por_sancho_ii_portugal start_date = 1223.3.25 end_date = 1247.12.4 regnal_number = 2 }
+			ruler_term = { character = por_afonso_iii_portugal start_date = 1247.12.4 end_date = 1279.2.16 regnal_number = 3 }
+			ruler_term = { character = por_dinis_i_portugal start_date = 1279.2.16 end_date = 1325.1.7 regnal_number = 1 }
+			ruler_term = { character = por_afonso_iv_portugal start_date = 1325.1.7 regnal_number = 4 }
+
+			regnal_numbers = {
+				name_alphonse = 4
+				name_sancho = 2
+				name_dennis = 1
+			}
+
+			reforms = {
+				portuguese_monarchy_reform
+				feudal_nobility
+			}
+			privilege = {
+				#Clergy
+				clergy_military_orders
+				#Burghers
+				land_of_commerce
+			}
+			laws = {
+				administrative_system = central_councils
+				censorship = limited_censorship
+				cultural_traditions_law = civil_society
+				distribution_of_power_law = dop_traditional_distribution_of_power
+				education_masses_law = basic_religious_education
+				feudal_de_jure_law = by_blood
+				heir_religion_law = heir_same_religion
+				maritime_law = protect_trade_routes
+				medieval_levy_law = noble_levies
+				piracy_law = anti_piracy_policy
+				royal_court_customs_law = itinerant_court_policy
+			}
+
+			centralization_vs_decentralization = 15
+			mercantilism_vs_free_trade = -20
+			land_vs_naval = -10
+			quality_vs_quantity = -10
+			capital_economy_vs_traditional_economy = 80
+		}
+
+		tolerated_cultures = {
+			leonese
+			andalusi
+			sephardi
+		}
+
+		country_rank = rank_kingdom
+		capital = lisbon
+		dynasty = estevez_dynasty
+		ai_advance_preference_tags = {
+			exploration = 5
+		}
+	}
+}

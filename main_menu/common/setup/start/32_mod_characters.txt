@@ -1,0 +1,18 @@
+#Remember to write sons and daughters ALWAYS after their parents to avoid crashes
+
+character_db={
+
+	por_carlos_estevao = {
+		first_name = { name = name_carlos_estevao }
+		culture = portuguese
+		religion = catholic
+		adm = 45 dip = 60 mil = 45
+		birth_date = 1336.2.21
+		birth = evora
+		ruler_trait = benevolent
+		ruler_trait = just		
+		dynasty = estevez_dynasty
+		tag = POR
+
+	}
+}

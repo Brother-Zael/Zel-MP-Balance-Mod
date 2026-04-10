@@ -1,0 +1,10 @@
+﻿zel_france_nerf = {
+	game_data = {
+		category = country
+		decaying = yes
+	}
+	levy_combat_efficiency_modifier = -0.8
+	land_morale_modifier = -0.2
+	mercenary_maintenance_cost = 0.5
+	hire_mercenary_premium_cost_modifier = 0.25
+}

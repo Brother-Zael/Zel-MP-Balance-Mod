@@ -1,0 +1,13 @@
+﻿l_english:
+ flavor_bri.1.title: "The Catholicon Armoricum"
+ flavor_bri.1.desc: "In 1464, Jehan Lagadeuc wrote the first trilingual dictionary, which contained words in Latin, Breton, and French. This amazing book was the first dictionary in either the Breton or the French language. By distributing copies of the Catholicon, we can show that Breton is just as much a major language as French."
+ flavor_bri.1.a: "Good for Brittany!"
+ 
+ #ZAEL STUFF
+ flavor_bri.2.title: "Arrival of John De Montfort"
+ flavor_bri.2.desc: "John De Montfort, an english advisor and the nephew of our ruler through his eldest sister, has recently arrived from England, his pregnant second wife in tow. That he holds ambitions for the throne upon the death of our heirless monarch is no secret."
+ flavor_bri.2.a: "What does this mean for our future?"
+ flavor_bri.3.title: "Breton Succession Crisis"
+ flavor_bri.3.desc: "Today John de Montfort has put forth his claim as the rightful successor of the childless John III 'The Good'. Many nobles in the north and west of Brittany support this claim, as do the English, while those centered in the south around Nantes reject the claim as it would mean falling in line with the English. What should be done in this time of crisis?"
+ flavor_bri.3.a: "His claim is true!"
+ flavor_bri.3.b: "Death to John! Death to the English!"

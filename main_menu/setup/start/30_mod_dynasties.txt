@@ -1,0 +1,15 @@
+dynasty_manager = {
+	default_dynasty = { name = { name = default_dynasty } home = vattnajokull }
+	
+	estevez_dynasty = { 
+		name = { name = estevez_dynasty }
+		home = evora
+		dynasty_name_type = descendant
+		male_names = {
+			name_alphonse name_ferdinand name_john name_peter name_sebastian name_carlos_estevao
+		}
+		female_names = {
+			name_beatrix name_catherine name_eleanor name_elizabeth name_mary name_veronica
+		}
+	}
+}

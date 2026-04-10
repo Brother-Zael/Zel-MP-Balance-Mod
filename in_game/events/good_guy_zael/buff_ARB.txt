@@ -1,0 +1,64 @@
+﻿namespace = buff_arb
+buff_arb.1 = {
+	type = country_event
+	title = buff.1.title
+	desc = buff.1.desc
+	fire_only_once = yes
+	
+	dynamic_historical_event = {
+		tag = ARB
+		from = 1337.4.4
+		to = 1340.1.1
+		monthly_chance = 30
+	}
+
+	illustration_tags = {
+        10 = happy
+        10 = interior
+    }
+
+	immediate = {
+		capital = {
+			save_scope_as = target_location
+		}
+		scope:target_location = {
+			random_pop = {
+				limit = {
+					owner = root
+					pop_type = pop_type:peasants
+				}
+				add_pop_size = {
+					value = pop_size
+					multiply = 8.0
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = buff.1.a
+		
+		add_gold = {
+			value = 1000
+		}
+		province_definition:cagliari_province = {
+			every_location_in_province_definition = {
+				limit = {
+					owner = c:ARA
+				}
+				add_core = c:ARB
+			}
+		}
+		province_definition:gallura_province = {
+			every_location_in_province_definition = {
+				limit = {
+					owner = c:ARA
+				}
+				add_core = c:ARB
+			}
+		}
+		location:sassari = {
+			add_core = c:ARB
+		}
+	}
+}

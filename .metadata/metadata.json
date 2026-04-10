@@ -1,0 +1,11 @@
+﻿{
+	"name":	"Zel Hundred Years Mod",
+	"id":	"zelhundred.mymod",
+	"version":	"",
+	"supported_game_version":	"",
+	"short_description":	"MP Balance mod for the hundred years war situation, for when a player England and a player France REALLY wanna fight each other",
+	"tags":	["Balance", "Events", "Gameplay", "Military"],
+	"relationships":	[],
+	"game_custom_data":	{
+}
+}

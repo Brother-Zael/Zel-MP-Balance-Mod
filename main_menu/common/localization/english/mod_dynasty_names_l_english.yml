@@ -1,0 +1,9 @@
+﻿l_english:
+ default_dynasty: "(Default)"
+ #
+ DYNASTY_NAME_TYPE_default: "Default"
+ DYNASTY_NAME_TYPE_location: "Location"
+ DYNASTY_NAME_TYPE_patronym: "Patronym"
+ DYNASTY_NAME_TYPE_descendant: "Descendant"
+ #
+ estevez_dynasty: "d’Évora"

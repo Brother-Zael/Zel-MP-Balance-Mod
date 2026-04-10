@@ -1,0 +1,67 @@
+﻿unconditional_surrender = {
+	type = diplomacy
+	category = CATEGORY_HOSTILE_ACTIONS
+	
+	show_message = yes
+	show_message_to_target = yes 
+	block_when_at_war = no
+	use_enroute = no
+	
+	select_trigger = {
+		looking_for_a = country
+		target_flag = recipient
+	}
+	
+	potential = {
+		is_ai = no
+		scope:actor = {
+			is_at_war_with = scope:recipient
+		}
+		scope:actor = {
+			any_current_war = {
+				scope:recipient = { is_war_leader_of = PREV }
+				scope:actor = { is_war_leader_of = PREV }
+			}
+		}
+	}
+	
+	allow = {
+		is_ai = no
+		custom_tooltip = {
+			text = "unconditional_surrender_reason"
+			scope:actor = {
+				any_current_war = {
+					scope:recipient = { is_war_leader_of = PREV }
+					scope:actor = { is_war_leader_of = PREV }
+					war_length >= 12
+				}
+			}
+		}
+	}
+	
+	effect = {
+		scope:actor = {
+			every_country_in_hierarchy = {
+				limit = {
+					at_war = yes
+					and = {
+						exists = scope:recipient
+						is_at_war_with = scope:recipient
+					}
+				}
+				save_scope_as = uncon_sending_nation
+				custom_tooltip = {
+					text = "unconditional_surrender_desc_occupation"
+					every_province = {
+						every_location_in_province = {
+							limit = { controller = owner }
+							transfer_location_occupation = scope:recipient
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	ai_tick = never
+}
