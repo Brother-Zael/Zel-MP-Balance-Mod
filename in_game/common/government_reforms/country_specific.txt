@@ -4262,7 +4262,7 @@ shahbandariyya_reform = {
 #Arborea Zel Reform
 judicate_of_masses_reform = {
 	unique = yes
-	potential = { tag = ARB }
+	potential = { has_or_had_tag = ARB }
 	
 	country_modifier = {
 		monthly_towards_centralization = societal_value_monthly_move
