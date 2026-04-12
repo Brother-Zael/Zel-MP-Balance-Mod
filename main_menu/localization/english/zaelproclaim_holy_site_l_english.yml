@@ -4,3 +4,7 @@
  venerated_papal_holy_site: "Venerated Catholic Holy Site"
  vote_in_proclaim_holy_site: "Vote in: 'Proclaim Holy Site'"
  vote_in_proclaim_holy_site_desc: "We will take a stance in the vote to Proclaim a Holy Site."
+ select_location: "Select Location"
+ proclaim_holy_site_specific: "Proclaim Holy Site"
+ proclaim_holy_site_specific_desc: "Specific Holy Site"
+ 
