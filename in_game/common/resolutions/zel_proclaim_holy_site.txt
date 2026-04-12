@@ -1,4 +1,4 @@
-proclaim_holy_site = {
+﻿proclaim_holy_site = {
 
 	international_organization_type = catholic_church
 
