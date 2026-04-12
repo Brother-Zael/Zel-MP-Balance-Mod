@@ -1,0 +1,252 @@
+proclaim_holy_site = {
+
+	international_organization_type = catholic_church
+
+	potential = {
+		papacy_active = yes
+	}
+
+	allow = {
+		scope:actor = {
+			is_member_of_international_organization = international_organization:catholic_church
+			OR = {
+				is_ai = no
+				scope:recipient = {
+					resolution_is_active = resolution:proclaim_holy_site
+				}
+			}
+			num_cardinals > 0
+		}
+		no_papal_bull_active = yes
+		religion:catholic = {
+			modifier:curia_actions_blocked = no
+		}
+	}
+
+	cooldown = { type = proclaim_holy_site years = 50 }
+
+	can_vote = {
+		international_organization:catholic_church = {
+			country_has_special_status = {
+				type = special_status:curia
+				country = scope:actor
+			}
+		}
+	}
+
+	votes = {
+		add = {
+			desc = "[cardinal_s|e]"
+			value = scope:actor.num_cardinals
+		}
+	}
+
+	proposal_price = price:propose_curia_action
+
+	months = 12
+
+	select_trigger = {
+		looking_for_a = international_organization
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			international_organization_type = international_organization_type:catholic_church
+		}
+		enabled = {
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = location
+		target_flag = target_location
+		interaction_source_list = {
+			region:balkan_region = {
+				every_country_with_capital_in_geography = {
+					every_owned_non_rural_location = {
+						limit = {
+							scope:proposer = { has_discovered = prev }
+						}
+						add_to_list = source
+					}
+				}
+			}
+			region:anatolia_region = {
+				every_country_with_capital_in_geography = {
+					every_owned_non_rural_location = {
+						limit = {
+							scope:proposer = { has_discovered = prev }
+						}
+						add_to_list = source
+					}
+				}
+			}
+			region:crescent_region = {
+				every_country_with_capital_in_geography = {
+					every_owned_non_rural_location = {
+						limit = {
+							scope:proposer = { has_discovered = prev }
+						}
+						add_to_list = source
+					}
+				}
+			}
+			region:egypt_region = {
+				every_country_with_capital_in_geography = {
+					every_owned_non_rural_location = {
+						limit = {
+							scope:proposer = { has_discovered = prev }
+						}
+						add_to_list = source
+					}
+				}
+			}
+			region:maghreb_region = {
+				every_country_with_capital_in_geography = {
+					every_owned_non_rural_location = {
+						limit = {
+							scope:proposer = { has_discovered = prev }
+						}
+						add_to_list = source
+					}
+				}
+			}
+			region:baltic_region = {
+				every_country_with_capital_in_geography = {
+					every_owned_non_rural_location = {
+						limit = {
+							scope:proposer = { has_discovered = prev }
+						}
+						add_to_list = source
+					}
+				}
+			}
+			region:carpathia_region = {
+				every_country_with_capital_in_geography = {
+					every_owned_non_rural_location = {
+						limit = {
+							scope:proposer = { has_discovered = prev }
+						}
+						add_to_list = source
+					}
+				}
+			}
+			region:scandinavian_region = {
+				every_country_with_capital_in_geography = {
+					every_owned_non_rural_location = {
+						limit = {
+							scope:proposer = { has_discovered = prev }
+						}
+						add_to_list = source
+					}
+				}
+			}
+			region:ruthenia_region = {
+				every_country_with_capital_in_geography = {
+					every_owned_non_rural_location = {
+						limit = {
+							scope:proposer = { has_discovered = prev }
+						}
+						add_to_list = source
+					}
+				}
+			}
+			region:russian_region = {
+				every_country_with_capital_in_geography = {
+					every_owned_non_rural_location = {
+						limit = {
+							scope:proposer = { has_discovered = prev }
+						}
+						add_to_list = source
+					}
+				}
+			}
+			region:caucasus_region = {
+				every_country_with_capital_in_geography = {
+					every_owned_non_rural_location = {
+						limit = {
+							scope:proposer = { has_discovered = prev }
+						}
+						add_to_list = source
+					}
+				}
+			}
+		}
+		name = "select_location"
+		column = { data = name }
+		column = { data = population }
+		column = { data = owner_flag }
+		visible = {
+			NOT = { is_location_holy_site_for = religion:catholic }
+		}
+		enabled = {
+			trigger_if = {
+				limit = {
+					root = no
+				}
+				#can't select "no" when proposing something
+				scope:recipient = {
+					resolution_is_active = resolution:proclaim_holy_site
+				}
+			}
+			trigger_else = {
+				always = yes
+			}
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = boolean
+		target_flag = vote
+		name = "select_vote"
+		column = {
+			data = name
+		}
+		visible = {
+		}
+		enabled = {
+			trigger_if = {
+				limit = {
+					root = no
+				}
+				#can't select "no" when proposing something
+				scope:recipient = {
+					resolution_is_active = resolution:illius_qui_se_pro_divini
+				}
+			}
+			trigger_else = {
+				always = yes
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { exists = scope:target_location }
+			scope:target_location = {
+				create_holy_site = {
+					name = venerated_papal_holy_site
+					type = christian_holy_site
+					importance = 1
+					location = scope:target_location
+					religions = { religion:catholic }
+				}
+			}
+		}
+	}
+	
+	reject_effect = {
+		scope:proposer = {
+			add_prestige = prestige_extreme_penalty
+		}
+	}
+
+	ai_will_do = {
+		add = 25
+	}
+	ai_proposer_risk = {
+		value = "scope:actor.currency_utility(prestige|-20)"
+	}
+}
