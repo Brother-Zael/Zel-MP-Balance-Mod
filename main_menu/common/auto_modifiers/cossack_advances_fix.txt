@@ -1,0 +1,108 @@
+﻿
+
+############################
+# age_1_traditions
+############################
+cossack_raids_modifier = {
+	requires_real = yes
+	potential_trigger = {
+		country_has_estate = estate_type:cossacks_estate
+		has_advance = cossack_raids
+	}
+	amount_looted_modifier = 0.25
+}
+
+tamed_steppes_modifier = {
+	requires_real = yes
+	potential_trigger = {
+		country_has_estate = estate_type:cossacks_estate
+		has_advance = tamed_steppes
+	}
+	global_monthly_food_modifier = 0.05
+}
+
+############################
+# age_2_renaissance
+############################
+cossacks_recruitment_modifier = {
+	requires_real = yes
+	potential_trigger = {
+		country_has_estate = estate_type:cossacks_estate
+		has_advance = cossacks_recruitment
+	}
+	army_cavalry_power = 0.15
+}
+
+cossacks_escaped_serfs_modifier = {
+	requires_real = yes
+	potential_trigger = {
+		country_has_estate = estate_type:cossacks_estate
+		has_advance = cossacks_escaped_serfs
+	}
+	army_reinforce_cost = -0.05
+}
+
+cossacks_hetmanate_modifier = {
+	requires_real = yes
+	potential_trigger = {
+		country_has_estate = estate_type:cossacks_estate
+		has_advance = cossacks_hetmanate
+	}
+	monthly_legitimacy = 0.05
+}
+
+############################
+# age_3_discovery
+############################
+cossack_administration_modifier = {
+	requires_real = yes
+	potential_trigger = {
+		country_has_estate = estate_type:cossacks_estate
+		has_advance = cossack_administration
+	}
+	discipline = 0.05
+	global_manpower_modifier = 0.1
+}
+
+steppe_riders_modifier = {
+	requires_real = yes
+	potential_trigger = {
+		country_has_estate = estate_type:cossacks_estate
+		has_advance = steppe_riders
+	}
+	land_unit_attrition = -0.1
+	global_horses_output_modifier = 0.2
+}
+
+############################
+# age_4_reformation
+############################
+cossacks_military_society_modifier = {
+	requires_real = yes
+	potential_trigger = {
+		country_has_estate = estate_type:cossacks_estate
+		has_advance = cossacks_military_society
+	}
+	monthly_army_tradition = 0.05
+}
+
+cossacks_serf_autonomy_modifier = {
+	requires_real = yes
+	potential_trigger = {
+		country_has_estate = estate_type:cossacks_estate
+		has_advance = cossacks_serf_autonomy
+	}
+	global_separatism = -0.05
+}
+
+############################
+# age_6_revolutions
+############################
+cossack_reputation_modifier = {
+	requires_real = yes
+	potential_trigger = {
+		country_has_estate = estate_type:cossacks_estate
+		has_advance = cossack_reputation
+	}
+	army_cavalry_power = 0.1
+}
