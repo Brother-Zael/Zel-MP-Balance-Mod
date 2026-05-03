@@ -54,3 +54,26 @@ cossacks_serf_autonomy_modifier = {
 cossack_reputation_modifier = {
 	army_cavalry_power = 0.1
 }
+
+# # Age 1
+# add_country_modifier = cossack_raids_modifier
+# add_country_modifier = tamed_steppes_modifier
+
+# # Age 2
+# add_country_modifier = cossacks_recruitment_modifier
+# add_country_modifier = cossacks_escaped_serfs_modifier
+# add_country_modifier = cossacks_hetmanate_modifier
+
+# # Age 3
+# add_country_modifier = cossack_administration_modifier
+# add_country_modifier = steppe_riders_modifier
+
+# # Age 4
+# add_country_modifier = cossacks_military_society_modifier
+# add_country_modifier = cossacks_serf_autonomy_modifier
+
+# # Age 6
+# add_country_modifier = cossack_reputation_modifier
+
+
+
