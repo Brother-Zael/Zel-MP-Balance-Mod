@@ -1,0 +1,52 @@
+﻿zel_mutual_defense_law = {
+	type = international_organization
+	law_category = military
+	potential = {
+		OR = {
+			this = international_organization:modded_league_1
+			this = international_organization:modded_league_2
+			this = international_organization:modded_league_3
+			this = international_organization:modded_league_4
+			this = international_organization:modded_league_5
+			this = international_organization:modded_league_6
+			this = international_organization:modded_league_7
+		}
+	}
+	locked = { always = yes }
+
+	zel_possible_defense_policy = {
+		join_defensive_wars_can_call = {
+			custom_tooltip = {
+				text = JOIN_WARS_DEFAULT_REASON
+				always = yes
+			}
+		}
+	}
+}
+
+zel_mutual_offense_law = {
+	type = international_organization
+	law_category = military
+	potential = { 
+        OR = {
+			this = international_organization:modded_league_1
+			this = international_organization:modded_league_2
+			this = international_organization:modded_league_3
+			this = international_organization:modded_league_4
+			this = international_organization:modded_league_5
+			this = international_organization:modded_league_6
+			this = international_organization:modded_league_7
+		}
+	}
+	locked = { always = yes }
+
+	zel_possible_offense_policy = {
+		join_offensive_wars_can_call = {
+			
+			custom_tooltip = {
+				text = JOIN_WARS_DEFAULT_REASON
+				always = yes
+			}
+		}
+	}
+}

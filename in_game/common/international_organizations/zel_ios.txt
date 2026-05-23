@@ -1,0 +1,797 @@
+﻿modded_league_1 = {
+	has_target = no
+	unique = yes
+	create_visible_trigger = {
+		#is_human = yes
+		custom_tooltip = {
+			text = "mortal_kombat_membership_tt"
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+
+	invite_visible_trigger = {
+		#is_human = yes
+		scope:target = { 
+			#is_human = yes 
+		}
+	}
+
+	invite_enabled_trigger = {
+		scope:target = { 
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+
+	laws = {
+		zel_mutual_defense_law = zel_possible_defense_policy
+		zel_mutual_offense_law = zel_possible_offense_policy
+	}
+
+	can_declare_war = {
+		trigger_if = {
+			limit = { scope:attacker ?= { is_member_of_international_organization = scope:recipient } }
+			scope:defender ?= { NOT = { is_member_of_international_organization = scope:recipient } }
+		}
+		trigger_else = {
+			always = yes
+		}
+	}
+
+	can_leave_trigger = {
+		#is_human = yes
+	}
+
+	has_military_access = {
+		scope:recipient ?= {
+			is_member_of_international_organization = root
+		}
+		scope:actor ?= {
+			is_member_of_international_organization = root
+		}
+	}
+
+	fleet_basing_rights = {
+		scope:recipient ?= {
+			is_member_of_international_organization = root
+		}
+		scope:actor ?= {
+			is_member_of_international_organization = root
+		}
+	}
+
+	gives_food_access_to_members = yes
+	can_recruit_regiments_in_members = yes
+	can_build_ships_in_members = yes
+	can_build_ships_in_members = yes
+	can_build_roads_in_members = yes
+	can_build_buildings_in_members = yes
+	can_build_rgos_in_members = yes
+
+	show_on_diplomatic_map = yes
+	
+	can_join_trigger = {
+		#is_human = yes
+		custom_tooltip = {
+			text = "mortal_kombat_membership_tt"
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+	
+	auto_disband_trigger = {
+		total_members < 1
+	}
+	disband_minimum_member_count = 1
+
+	ai_desire_to_join = {
+		value = -1
+	}
+}
+
+modded_league_2 = {
+	has_target = no
+	unique = yes
+	create_visible_trigger = {
+		is_situation_active = situation:mortal_kombat_tournament
+		#is_human = yes
+		custom_tooltip = {
+			text = "mortal_kombat_membership_tt"
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+
+	invite_visible_trigger = {
+		#is_human = yes
+		scope:target = { 
+			#is_human = yes 
+		}
+	}
+
+	invite_enabled_trigger = {
+		scope:target = { 
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+
+	laws = {
+		zel_mutual_defense_law = zel_possible_defense_policy
+		zel_mutual_offense_law = zel_possible_offense_policy
+	}
+
+	can_declare_war = {
+		trigger_if = {
+			limit = { scope:attacker ?= { is_member_of_international_organization = scope:recipient } }
+			scope:defender ?= { NOT = { is_member_of_international_organization = scope:recipient } }
+		}
+		trigger_else = {
+			always = yes
+		}
+	}
+
+	can_leave_trigger = {
+		#is_human = yes
+	}
+
+	has_military_access = {
+		scope:recipient ?= {
+			is_member_of_international_organization = root
+		}
+		scope:actor ?= {
+			is_member_of_international_organization = root
+		}
+	}
+
+	fleet_basing_rights = {
+		scope:recipient ?= {
+			is_member_of_international_organization = root
+		}
+		scope:actor ?= {
+			is_member_of_international_organization = root
+		}
+	}
+
+	gives_food_access_to_members = yes
+	can_recruit_regiments_in_members = yes
+	can_build_ships_in_members = yes
+	can_build_ships_in_members = yes
+	can_build_roads_in_members = yes
+	can_build_buildings_in_members = yes
+	can_build_rgos_in_members = yes
+
+	show_on_diplomatic_map = yes
+	
+	can_join_trigger = {
+		#is_human = yes
+		custom_tooltip = {
+			text = "mortal_kombat_membership_tt"
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+	
+	auto_disband_trigger = {
+		total_members < 1
+	}
+	disband_minimum_member_count = 1
+
+	ai_desire_to_join = {
+		value = -1
+	}
+}
+
+modded_league_3 = {
+	has_target = no
+	unique = yes
+	create_visible_trigger = {
+		is_situation_active = situation:mortal_kombat_tournament
+		#is_human = yes
+		custom_tooltip = {
+			text = "mortal_kombat_membership_tt"
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+
+	invite_visible_trigger = {
+		#is_human = yes
+		scope:target = { 
+			#is_human = yes 
+		}
+	}
+
+	invite_enabled_trigger = {
+		scope:target = { 
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+
+	laws = {
+		zel_mutual_defense_law = zel_possible_defense_policy
+		zel_mutual_offense_law = zel_possible_offense_policy
+	}
+
+	can_declare_war = {
+		trigger_if = {
+			limit = { scope:attacker ?= { is_member_of_international_organization = scope:recipient } }
+			scope:defender ?= { NOT = { is_member_of_international_organization = scope:recipient } }
+		}
+		trigger_else = {
+			always = yes
+		}
+	}
+
+	can_leave_trigger = {
+		#is_human = yes
+	}
+
+	has_military_access = {
+		scope:recipient ?= {
+			is_member_of_international_organization = root
+		}
+		scope:actor ?= {
+			is_member_of_international_organization = root
+		}
+	}
+
+	fleet_basing_rights = {
+		scope:recipient ?= {
+			is_member_of_international_organization = root
+		}
+		scope:actor ?= {
+			is_member_of_international_organization = root
+		}
+	}
+
+	gives_food_access_to_members = yes
+	can_recruit_regiments_in_members = yes
+	can_build_ships_in_members = yes
+	can_build_ships_in_members = yes
+	can_build_roads_in_members = yes
+	can_build_buildings_in_members = yes
+	can_build_rgos_in_members = yes
+
+	show_on_diplomatic_map = yes
+	
+	can_join_trigger = {
+		#is_human = yes
+		custom_tooltip = {
+			text = "mortal_kombat_membership_tt"
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+	
+	auto_disband_trigger = {
+		total_members < 1
+	}
+	disband_minimum_member_count = 1
+
+	ai_desire_to_join = {
+		value = -1
+	}
+}
+
+modded_league_4 = {
+	has_target = no
+	unique = yes
+	create_visible_trigger = {
+		is_situation_active = situation:mortal_kombat_tournament
+		#is_human = yes
+		custom_tooltip = {
+			text = "mortal_kombat_membership_tt"
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+
+	invite_visible_trigger = {
+		#is_human = yes
+		scope:target = { 
+			#is_human = yes 
+		}
+	}
+
+	invite_enabled_trigger = {
+		scope:target = { 
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+
+	laws = {
+		zel_mutual_defense_law = zel_possible_defense_policy
+		zel_mutual_offense_law = zel_possible_offense_policy
+	}
+
+	can_declare_war = {
+		trigger_if = {
+			limit = { scope:attacker ?= { is_member_of_international_organization = scope:recipient } }
+			scope:defender ?= { NOT = { is_member_of_international_organization = scope:recipient } }
+		}
+		trigger_else = {
+			always = yes
+		}
+	}
+
+	can_leave_trigger = {
+		#is_human = yes
+	}
+
+	has_military_access = {
+		scope:recipient ?= {
+			is_member_of_international_organization = root
+		}
+		scope:actor ?= {
+			is_member_of_international_organization = root
+		}
+	}
+
+	fleet_basing_rights = {
+		scope:recipient ?= {
+			is_member_of_international_organization = root
+		}
+		scope:actor ?= {
+			is_member_of_international_organization = root
+		}
+	}
+
+	gives_food_access_to_members = yes
+	can_recruit_regiments_in_members = yes
+	can_build_ships_in_members = yes
+	can_build_ships_in_members = yes
+	can_build_roads_in_members = yes
+	can_build_buildings_in_members = yes
+	can_build_rgos_in_members = yes
+
+	show_on_diplomatic_map = yes
+	
+	can_join_trigger = {
+		#is_human = yes
+		custom_tooltip = {
+			text = "mortal_kombat_membership_tt"
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+	
+	auto_disband_trigger = {
+		total_members < 1
+	}
+	disband_minimum_member_count = 1
+
+	ai_desire_to_join = {
+		value = -1
+	}
+}
+
+modded_league_5 = {
+	has_target = no
+	unique = yes
+	create_visible_trigger = {
+		is_situation_active = situation:mortal_kombat_tournament
+		#is_human = yes
+		custom_tooltip = {
+			text = "mortal_kombat_membership_tt"
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+
+	invite_visible_trigger = {
+		#is_human = yes
+		scope:target = { 
+			#is_human = yes 
+		}
+	}
+
+	invite_enabled_trigger = {
+		scope:target = { 
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+
+	laws = {
+		zel_mutual_defense_law = zel_possible_defense_policy
+		zel_mutual_offense_law = zel_possible_offense_policy
+	}
+
+	can_declare_war = {
+		trigger_if = {
+			limit = { scope:attacker ?= { is_member_of_international_organization = scope:recipient } }
+			scope:defender ?= { NOT = { is_member_of_international_organization = scope:recipient } }
+		}
+		trigger_else = {
+			always = yes
+		}
+	}
+
+	can_leave_trigger = {
+		#is_human = yes
+	}
+
+	has_military_access = {
+		scope:recipient ?= {
+			is_member_of_international_organization = root
+		}
+		scope:actor ?= {
+			is_member_of_international_organization = root
+		}
+	}
+
+	fleet_basing_rights = {
+		scope:recipient ?= {
+			is_member_of_international_organization = root
+		}
+		scope:actor ?= {
+			is_member_of_international_organization = root
+		}
+	}
+
+	gives_food_access_to_members = yes
+	can_recruit_regiments_in_members = yes
+	can_build_ships_in_members = yes
+	can_build_ships_in_members = yes
+	can_build_roads_in_members = yes
+	can_build_buildings_in_members = yes
+	can_build_rgos_in_members = yes
+
+	show_on_diplomatic_map = yes
+	
+	can_join_trigger = {
+		#is_human = yes
+		custom_tooltip = {
+			text = "mortal_kombat_membership_tt"
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+	
+	auto_disband_trigger = {
+		total_members < 1
+	}
+	disband_minimum_member_count = 1
+
+	ai_desire_to_join = {
+		value = -1
+	}
+}
+
+modded_league_6 = {
+	has_target = no
+	unique = yes
+	create_visible_trigger = {
+		is_situation_active = situation:mortal_kombat_tournament
+		#is_human = yes
+		custom_tooltip = {
+			text = "mortal_kombat_membership_tt"
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+
+	invite_visible_trigger = {
+		#is_human = yes
+		scope:target = { 
+			#is_human = yes 
+		}
+	}
+
+	invite_enabled_trigger = {
+		scope:target = { 
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+
+	laws = {
+		zel_mutual_defense_law = zel_possible_defense_policy
+		zel_mutual_offense_law = zel_possible_offense_policy
+	}
+
+	can_declare_war = {
+		trigger_if = {
+			limit = { scope:attacker ?= { is_member_of_international_organization = scope:recipient } }
+			scope:defender ?= { NOT = { is_member_of_international_organization = scope:recipient } }
+		}
+		trigger_else = {
+			always = yes
+		}
+	}
+
+	can_leave_trigger = {
+		#is_human = yes
+	}
+
+	has_military_access = {
+		scope:recipient ?= {
+			is_member_of_international_organization = root
+		}
+		scope:actor ?= {
+			is_member_of_international_organization = root
+		}
+	}
+
+	fleet_basing_rights = {
+		scope:recipient ?= {
+			is_member_of_international_organization = root
+		}
+		scope:actor ?= {
+			is_member_of_international_organization = root
+		}
+	}
+
+	gives_food_access_to_members = yes
+	can_recruit_regiments_in_members = yes
+	can_build_ships_in_members = yes
+	can_build_ships_in_members = yes
+	can_build_roads_in_members = yes
+	can_build_buildings_in_members = yes
+	can_build_rgos_in_members = yes
+
+	show_on_diplomatic_map = yes
+	
+	can_join_trigger = {
+		#is_human = yes
+		custom_tooltip = {
+			text = "mortal_kombat_membership_tt"
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+	
+	auto_disband_trigger = {
+		total_members < 1
+	}
+	disband_minimum_member_count = 1
+
+	ai_desire_to_join = {
+		value = -1
+	}
+}
+
+modded_league_7 = {
+	has_target = no
+	unique = yes
+
+	create_visible_trigger = {
+		is_situation_active = situation:mortal_kombat_tournament
+		#is_human = yes
+		custom_tooltip = {
+			text = "mortal_kombat_membership_tt"
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+
+	invite_visible_trigger = {
+		#is_human = yes
+		scope:target = { 
+			#is_human = yes 
+		}
+	}
+
+	invite_enabled_trigger = {
+		scope:target = { 
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+
+	laws = {
+		zel_mutual_defense_law = zel_possible_defense_policy
+		zel_mutual_offense_law = zel_possible_offense_policy
+	}
+
+	can_declare_war = {
+		trigger_if = {
+			limit = { scope:attacker ?= { is_member_of_international_organization = scope:recipient } }
+			scope:defender ?= { NOT = { is_member_of_international_organization = scope:recipient } }
+		}
+		trigger_else = {
+			always = yes
+		}
+	}
+
+	can_leave_trigger = {
+		#is_human = yes
+	}
+
+	has_military_access = {
+		scope:recipient ?= {
+			is_member_of_international_organization = root
+		}
+		scope:actor ?= {
+			is_member_of_international_organization = root
+		}
+	}
+
+	fleet_basing_rights = {
+		scope:recipient ?= {
+			is_member_of_international_organization = root
+		}
+		scope:actor ?= {
+			is_member_of_international_organization = root
+		}
+	}
+
+	gives_food_access_to_members = yes
+	can_recruit_regiments_in_members = yes
+	can_build_ships_in_members = yes
+	can_build_ships_in_members = yes
+	can_build_roads_in_members = yes
+	can_build_buildings_in_members = yes
+	can_build_rgos_in_members = yes
+
+	show_on_diplomatic_map = yes
+	
+	can_join_trigger = {
+		#is_human = yes
+		custom_tooltip = {
+			text = "mortal_kombat_membership_tt"
+			NOR = {
+				is_member_of_international_organization = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+	
+	auto_disband_trigger = {
+		total_members < 1
+	}
+	disband_minimum_member_count = 1
+
+	ai_desire_to_join = {
+		value = -1
+	}
+}

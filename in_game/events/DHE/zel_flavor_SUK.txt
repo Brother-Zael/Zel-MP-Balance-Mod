@@ -1,0 +1,40 @@
+﻿namespace = zel_flavor_suk
+
+zel_flavor_suk.1 = { # Front Palace
+	type = country_event
+	title = zel_flavor_suk.1.title
+	desc = zel_flavor_suk.1.desc
+	outcome = neutral
+
+	fire_only_once = yes
+	dynamic_historical_event = {
+		tag = SUK
+		from = 1437.1.1
+		to = 1500.1.1
+		monthly_chance = 10
+	}
+	
+	trigger = {
+		has_advance = zel_suk_front_palace
+	}
+
+	illustration_tags = {
+		10 = angry
+		10 = interior
+	}
+
+	immediate = {
+		add_government_power = 10
+		change_heir_selection = heir_selection:favorite_son_elective_succession
+	}
+
+	option = {
+		name = zel_flavor_suk.1.a
+
+		show_as_tooltip = {
+			add_government_power = 10
+			change_heir_selection = heir_selection:favorite_son_elective_succession
+		}
+
+	}
+}

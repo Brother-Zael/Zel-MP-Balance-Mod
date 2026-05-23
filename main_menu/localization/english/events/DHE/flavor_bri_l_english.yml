@@ -11,3 +11,6 @@
  flavor_bri.3.desc: "Today John de Montfort has put forth his claim as the rightful successor of the childless John III 'The Good'. Many nobles in the north and west of Brittany support this claim, as do the English, while those centered in the south around Nantes reject the claim as it would mean falling in line with the English. What should be done in this time of crisis?"
  flavor_bri.3.a: "His claim is true!"
  flavor_bri.3.b: "Death to John! Death to the English!"
+ flavor_bri.1.entry: "$flavor_bri.1.title$"
+ flavor_bri.2.entry: "$flavor_bri.2.title$"
+ flavor_bri.3.entry: "$flavor_bri.3.title$"

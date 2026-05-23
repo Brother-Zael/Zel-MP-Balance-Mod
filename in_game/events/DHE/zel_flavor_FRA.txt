@@ -1,0 +1,266 @@
+﻿namespace = zel_flavor_fra
+
+zel_flavor_fra.1 = { # 
+	type = country_event
+	title = zel_flavor_fra.1.title
+	desc = zel_flavor_fra.1.desc
+	outcome = neutral
+
+	fire_only_once = yes
+	dynamic_historical_event = {
+		tag = FRA
+		from = 1337.1.1
+		to = 1340.1.1
+		monthly_chance = 100
+	}
+
+	illustration_tags = {
+		10 = angry
+		10 = interior
+	}
+
+	immediate = {
+		add_country_modifier = {
+			modifier = zel_france_nerf
+			years = 40
+			mode = replace
+		}
+
+		add_country_modifier = {
+			modifier = zel_france_trib
+			years = -1
+			mode = replace
+		}
+	}
+
+	option = {
+		name = zel_flavor_fra.1.a
+
+		show_as_tooltip = {
+			add_country_modifier = {
+				modifier = zel_france_nerf
+				years = 40
+				mode = replace
+			}
+	
+			add_country_modifier = {
+				modifier = zel_france_trib
+				years = -1
+				mode = replace
+			}
+		}
+		trigger_event_non_silently = {
+			id = zel_flavor_fra.2
+		}
+	}
+}
+
+
+zel_flavor_fra.2 = { # 
+	type = country_event
+	title = zel_flavor_fra.2.title
+	desc = zel_flavor_fra.2.desc
+	outcome = neutral
+
+	fire_only_once = yes
+
+	trigger = {
+		
+	}
+
+	illustration_tags = {
+		10 = angry
+		10 = interior
+	}
+	option = {
+		name = zel_flavor_fra.2.a
+		custom_tooltip = {
+			text = zel_france_nerf_tt
+			c:NEV = {
+				make_subject_of = { target = c:FRA type = subject_type:tributary }
+			}
+			c:RET = {
+				make_subject_of = { target = c:FRA type = subject_type:tributary }
+			}
+			c:NRB = {
+				make_subject_of = { target = c:FRA type = subject_type:tributary }
+			}
+			c:VNT = {
+				make_subject_of = { target = c:NRB type = subject_type:vassal }
+			}
+			c:RCC = {
+				make_subject_of = { target = c:ANG type = subject_type:vassal }
+			}
+			c:CLT = {
+				make_subject_of = { target = c:AMG type = subject_type:vassal }
+			}
+			c:FOI = {
+				make_subject_of = { target = c:FRA type = subject_type:tributary }
+			}
+			c:AMG = {
+				make_subject_of = { target = c:FRA type = subject_type:tributary }
+			}
+			c:FRZ = {
+				make_subject_of = { target = c:VLN type = subject_type:vassal }
+			}
+			c:BAR = {
+				make_subject_of = { target = c:FRA type = subject_type:tributary }
+			}
+			c:ANG = {
+				make_subject_of = { target = c:FRA type = subject_type:tributary }
+			}
+			c:AUV = {
+				make_subject_of = { target = c:VLN type = subject_type:vassal }
+			}
+			c:AST = {
+				make_subject_of = { target = c:FOI type = subject_type:vassal }
+			}
+			c:COM = {
+				make_subject_of = { target = c:FOI type = subject_type:vassal }
+			}
+			c:IJO = {
+				make_subject_of = { target = c:FOI type = subject_type:vassal }
+			}
+			c:VLN = {
+				make_subject_of = { target = c:FRA type = subject_type:tributary }
+			}
+			c:PER = {
+				make_subject_of = { target = c:NRB type = subject_type:vassal }
+			}
+			c:TON = {
+				make_subject_of = { target = c:FRA type = subject_type:tributary }
+			}
+			c:ROU = {
+				make_subject_of = { target = c:FRA type = subject_type:tributary }
+			}
+			province_definition:narbonnais_province = {
+				every_location_in_province_definition = {
+					change_location_owner = c:NRB
+					add_core = c:NRB
+				}
+			}
+			province_definition:nimois_province = {
+				every_location_in_province_definition = {
+					limit = { NOT = { location = location:montpellier } }
+					change_location_owner = c:NRB
+					add_core = c:NRB
+				}
+			}
+			province_definition:gevaudan_province = {
+				every_location_in_province_definition = {
+					change_location_owner = c:NRB
+					add_core = c:NRB
+				}
+			}
+			province_definition:turenne_province = {
+				every_location_in_province_definition = {
+					change_location_owner = c:VNT
+					add_core = c:VNT
+				}
+			}
+			province_definition:upper_auvergne_province = {
+				every_location_in_province_definition = {
+					change_location_owner = c:CLT
+					add_core = c:CLT
+				}
+			}
+			province_definition:foix_province = {
+				every_location_in_province_definition = {
+					change_location_owner = c:FOI
+					add_core = c:FOI
+				}
+			}
+			province_definition:razes_province = {
+				every_location_in_province_definition = {
+					change_location_owner = c:FOI
+					add_core = c:FOI
+				}
+			}
+			province_definition:toulousain_province = {
+				every_location_in_province_definition = {
+					limit = { NOT = { location = location:toulouse } }
+					change_location_owner = c:FOI
+					add_core = c:FOI
+				}
+			}
+			province_definition:bazadais_province = {
+				every_location_in_province_definition = {
+					limit = { NOT = { location = location:belin } }
+					change_location_owner = c:FOI
+					add_core = c:FOI
+				}
+			}
+			province_definition:bearn_bigorre_province = {
+				every_location_in_province_definition = {
+					change_location_owner = c:FOI
+					add_core = c:FOI
+				}
+			}
+			province_definition:agenais_province = {
+				every_location_in_province_definition = {
+					change_location_owner = c:AMG
+					add_core = c:AMG
+				}
+			}
+			province_definition:quercy_province = {
+				every_location_in_province_definition = {
+					change_location_owner = c:AMG
+					add_core = c:AMG
+				}
+			}
+			province_definition:rouergue_province = {
+				every_location_in_province_definition = {
+					change_location_owner = c:AMG
+					add_core = c:AMG
+				}
+			}
+			province_definition:combraille_province = {
+				every_location_in_province_definition = {
+					change_location_owner = c:AMG
+					add_core = c:AMG
+				}
+			}
+			province_definition:lyonnais_province = {
+				every_location_in_province_definition = {
+					change_location_owner = c:FRZ
+					add_core = c:FRZ
+				}
+			}
+			province_definition:lower_auvergne_province = {
+				every_location_in_province_definition = {
+					change_location_owner = c:AUV
+					add_core = c:AUV
+				}
+			}
+			province_definition:comminges_province = {
+				every_location_in_province_definition = {
+					change_location_owner = c:COM
+					add_core = c:COM
+				}
+			}
+			province_definition:vivarais_province = {
+				every_location_in_province_definition = {
+					change_location_owner = c:VLN
+					add_core = c:VLN
+				}
+			}
+			province_definition:perigord_province = {
+				every_location_in_province_definition = {
+					change_location_owner = c:PER
+					add_core = c:PER
+				}
+			}
+			province_definition:limousin_province = {
+				every_location_in_province_definition = {
+					change_location_owner = c:PER
+					add_core = c:PER
+				}
+			}
+			province_definition:autunnais_province = {
+				every_location_in_province_definition = {
+					change_location_owner = c:BUR
+				}
+			}
+		}
+	}
+}

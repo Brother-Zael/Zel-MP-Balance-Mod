@@ -1,0 +1,256 @@
+﻿mortal_kombat_tournament = {
+	monthly_spawn_chance = monthly_spawn_chance_unique
+
+	content_trigger = {
+		is_human = yes
+	}
+	
+	can_start = {
+		current_age_or_later = { age = age_4_reformation }
+	}
+	
+	can_end = {
+		always = no
+	}
+	
+	visible = {
+		OR = {
+			is_human = yes
+			AND = {
+				exists = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_1
+			}
+			AND = {
+				exists = international_organization:modded_league_1
+				is_member_of_international_organization = international_organization:modded_league_1
+			}
+			AND = {
+				exists = international_organization:modded_league_2
+				is_member_of_international_organization = international_organization:modded_league_2
+			}
+			AND = {
+				exists = international_organization:modded_league_3
+				is_member_of_international_organization = international_organization:modded_league_3
+			}
+			AND = {
+				exists = international_organization:modded_league_4
+				is_member_of_international_organization = international_organization:modded_league_4
+			}
+			AND = {
+				exists = international_organization:modded_league_5
+				is_member_of_international_organization = international_organization:modded_league_5
+			}
+			AND = {
+				exists = international_organization:modded_league_6
+				is_member_of_international_organization = international_organization:modded_league_6
+			}
+			AND = {
+				exists = international_organization:modded_league_7
+				is_member_of_international_organization = international_organization:modded_league_7
+			}
+		}
+	}
+	
+
+	on_start = {
+
+		international_organization:modded_league_1 ?= { 
+			add_to_global_variable_list = {
+				name = list_of_leagues
+				target = this
+			}
+		}
+		international_organization:modded_league_2 ?= { 
+			add_to_global_variable_list = {
+				name = list_of_leagues
+				target = this
+			}
+		}
+		international_organization:modded_league_3 ?= { 
+			add_to_global_variable_list = {
+				name = list_of_leagues
+				target = this
+			}
+		}
+		international_organization:modded_league_4 ?= { 
+			add_to_global_variable_list = {
+				name = list_of_leagues
+				target = this
+			}
+		}
+		international_organization:modded_league_5 ?= { 
+			add_to_global_variable_list = {
+				name = list_of_leagues
+				target = this
+			}
+		}
+		international_organization:modded_league_6 ?= { 
+			add_to_global_variable_list = {
+				name = list_of_leagues
+				target = this
+			}
+		}
+		international_organization:modded_league_7 ?= { 
+			add_to_global_variable_list = {
+				name = list_of_leagues
+				target = this
+			}
+		}
+
+		sort_global_variable_list = {
+			name = list_of_leagues
+			order = {
+				value = total_locations_owned
+			}
+		}
+		
+	}
+
+	on_monthly = {
+		if = {
+			limit = {
+				global_variable_list_size = {
+					name = list_of_leagues
+					value < 7
+				}
+			}
+			international_organization:modded_league_1 ?= {
+				if = {
+					limit = {
+						NOT = {
+							is_target_in_global_variable_list = {
+								name = eligible_beylik_list
+								target = international_organization:modded_league_1
+							}
+						}
+					}
+				}
+				add_to_global_variable_list = {
+					name = list_of_leagues
+					target = this
+				}
+			}
+			international_organization:modded_league_2 ?= { 
+				if = {
+					limit = {
+						NOT = {
+							is_target_in_global_variable_list = {
+								name = eligible_beylik_list
+								target = international_organization:modded_league_2
+							}
+						}
+					}
+				}
+				add_to_global_variable_list = {
+					name = list_of_leagues
+					target = this
+				}
+			}
+			international_organization:modded_league_3 ?= { 
+				if = {
+					limit = {
+						NOT = {
+							is_target_in_global_variable_list = {
+								name = eligible_beylik_list
+								target = international_organization:modded_league_3
+							}
+						}
+					}
+				}
+				add_to_global_variable_list = {
+					name = list_of_leagues
+					target = this
+				}
+			}
+			international_organization:modded_league_4 ?= { 
+				if = {
+					limit = {
+						NOT = {
+							is_target_in_global_variable_list = {
+								name = eligible_beylik_list
+								target = international_organization:modded_league_4
+							}
+						}
+					}
+				}
+				add_to_global_variable_list = {
+					name = list_of_leagues
+					target = this
+				}
+			}
+			international_organization:modded_league_5 ?= { 
+				if = {
+					limit = {
+						NOT = {
+							is_target_in_global_variable_list = {
+								name = eligible_beylik_list
+								target = international_organization:modded_league_5
+							}
+						}
+					}
+				}
+				add_to_global_variable_list = {
+					name = list_of_leagues
+					target = this
+				}
+			}
+			international_organization:modded_league_6 ?= { 
+				if = {
+					limit = {
+						NOT = {
+							is_target_in_global_variable_list = {
+								name = eligible_beylik_list
+								target = international_organization:modded_league_6
+							}
+						}
+					}
+				}
+				add_to_global_variable_list = {
+					name = list_of_leagues
+					target = this
+				}
+			}
+			international_organization:modded_league_7 ?= { 
+				if = {
+					limit = {
+						NOT = {
+							is_target_in_global_variable_list = {
+								name = eligible_beylik_list
+								target = international_organization:modded_league_7
+							}
+						}
+					}
+				}
+				add_to_global_variable_list = {
+					name = list_of_leagues
+					target = this
+				}
+			}
+		}
+
+		sort_global_variable_list = {
+			name = list_of_leagues
+			order = {
+				value = international_organization_economical_base
+			}
+		}
+	}
+
+
+	on_ending = {
+		
+	}
+
+	tooltip = {
+		#Here you will add some tooltips for hovering
+		#over the locations and them saying which league they belong to
+	}
+
+	map_color = {
+		#color each league differently
+	}
+
+	secondary_map_color = {
+		
+	}
+}

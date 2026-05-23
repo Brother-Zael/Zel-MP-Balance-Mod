@@ -1,0 +1,11 @@
+﻿allow_upstallesbam_parliament = {
+	positive = "gfx/interface/icons/modifier_types/allow_assembly_parliament.dds" 
+}
+
+allow_burmese_autocracy = {
+	positive = "gfx/interface/icons/modifier_types/allow_autocratic_parliament_positive.dds"
+}
+
+allow_sword_of_islam = {
+	positive = "gfx/interface/icons/modifier_types/call_jihad_cost_modifier.dds"
+}

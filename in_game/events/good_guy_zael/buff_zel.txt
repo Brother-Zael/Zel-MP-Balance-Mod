@@ -1,0 +1,439 @@
+﻿namespace = buff_zel
+buff_zel.1 = { #arborea buff
+	type = country_event
+	title = buff.1.title
+	desc = buff.1.desc
+	outcome = neutral
+	fire_only_once = yes
+	
+	dynamic_historical_event = {
+		tag = ARB
+		from = 1337.4.4
+		to = 1340.1.1
+		monthly_chance = 30
+	}
+
+	trigger = {
+		is_human = yes
+	}
+
+	illustration_tags = {
+        10 = happy
+        10 = interior
+    }
+
+	immediate = {
+		capital = {
+			save_scope_as = target_location
+		}
+		scope:target_location = {
+			random_pop = {
+				limit = {
+					owner = root
+					pop_type = pop_type:peasants
+				}
+				add_pop_size = {
+					value = pop_size
+					multiply = 8.0
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = buff.1.a
+		
+		add_gold = {
+			value = 1000
+		}
+		province_definition:cagliari_province = {
+			every_location_in_province_definition = {
+				limit = {
+					owner = c:ARA
+				}
+				add_core = c:ARB
+			}
+		}
+		province_definition:gallura_province = {
+			every_location_in_province_definition = {
+				limit = {
+					owner = c:ARA
+				}
+				add_core = c:ARB
+			}
+		}
+		location:sassari = {
+			add_core = c:ARB
+		}
+	}
+}
+
+buff_zel.2 = { #Frisia buff
+	type = country_event
+	title = buff.1.title
+	desc = buff.1.desc
+	outcome = neutral
+	fire_only_once = yes
+	
+	dynamic_historical_event = {
+		tag = FRI
+		from = 1337.4.4
+		to = 1340.1.1
+		monthly_chance = 30
+	}
+
+	trigger = {
+		is_human = yes
+	}
+
+	illustration_tags = {
+        10 = happy
+        10 = interior
+    }
+
+	immediate = {
+		capital = {
+			save_scope_as = target_location
+		}
+		scope:target_location = {
+			random_pop = {
+				limit = {
+					owner = root
+					pop_type = pop_type:peasants
+				}
+				add_pop_size = {
+					value = pop_size
+					multiply = 8.0
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = buff.1.a
+		
+		add_gold = {
+			value = 1000
+		}
+	}
+}
+
+buff_zel.3 = { #Strassburg buff
+	type = country_event
+	title = buff.1.title
+	desc = buff.1.desc
+	outcome = neutral
+	fire_only_once = yes
+	
+	dynamic_historical_event = {
+		tag = SFC
+		from = 1337.4.4
+		to = 1340.1.1
+		monthly_chance = 30
+	}
+
+	trigger = {
+		is_human = yes
+	}
+
+	illustration_tags = {
+        10 = happy
+        10 = interior
+    }
+
+	immediate = {
+		capital = {
+			save_scope_as = target_location
+		}
+		scope:target_location = {
+			random_pop = {
+				limit = {
+					owner = root
+					pop_type = pop_type:peasants
+				}
+				add_pop_size = {
+					value = pop_size
+					multiply = 3.0
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = buff.1.a
+		
+		add_gold = {
+			value = 300
+		}
+	}
+}
+
+buff_zel.4 = { #Gurgan buff
+	type = country_event
+	title = buff.1.title
+	desc = buff.1.desc
+	outcome = neutral
+	fire_only_once = yes
+	
+	dynamic_historical_event = {
+		tag = GRG
+		from = 1337.4.4
+		to = 1340.1.1
+		monthly_chance = 30
+	}
+
+	trigger = {
+		is_human = yes
+	}
+
+	illustration_tags = {
+        10 = happy
+        10 = interior
+    }
+	
+	option = {
+		name = buff.1.a
+		
+		add_gold = {
+			value = 1000
+		}
+	}
+}
+
+buff_zel.5 = { #Oman buff
+	type = country_event
+	title = buff.1.title
+	desc = buff.1.desc
+	outcome = neutral
+	fire_only_once = yes
+	
+	dynamic_historical_event = {
+		tag = OMA
+		from = 1337.4.4
+		to = 1340.1.1
+		monthly_chance = 30
+	}
+
+	trigger = {
+		is_human = yes
+	}
+
+	illustration_tags = {
+        10 = happy
+        10 = interior
+    }
+
+	immediate = {
+		
+		province_definition:masqat_province = {
+			every_location_in_province_definition = {
+				limit = {
+					is_owned_or_owned_by_subjects_or_below_of = c:ORM
+				}
+				add_core = root
+				change_location_owner = root
+			}
+		}
+		province_definition:batina_province = {
+			every_location_in_province_definition = {
+				limit = {
+					is_owned_or_owned_by_subjects_or_below_of = c:ORM
+				}
+				add_core = root
+				change_location_owner = root
+			}
+		}
+		province_definition:julfar_province = {
+			every_location_in_province_definition = {
+				limit = {
+					is_owned_or_owned_by_subjects_or_below_of = c:ORM
+				}
+				add_core = root
+			}
+		}
+		province_definition:qatar_province = {
+			every_location_in_province_definition = {
+				limit = {
+					is_owned_or_owned_by_subjects_or_below_of = c:ORM
+				}
+				add_core = root
+			}
+		}
+	}
+	
+	option = {
+		name = buff.1.a
+		
+		add_gold = {
+			value = 1000
+		}
+	}
+}
+
+buff_zel.6 = { #Sindh buff
+	type = country_event
+	title = buff.1.title
+	desc = buff.1.desc
+	outcome = neutral
+	fire_only_once = yes
+	
+	dynamic_historical_event = {
+		tag = SND
+		from = 1337.4.4
+		to = 1340.1.1
+		monthly_chance = 30
+	}
+
+	trigger = {
+		is_human = yes
+	}
+
+	illustration_tags = {
+        10 = happy
+        10 = interior
+    }
+	
+	option = {
+		name = buff.1.a
+		
+		add_gold = {
+			value = 500
+		}
+	}
+}
+
+buff_zel.7 = { #Mai buff
+	type = country_event
+	title = buff.1.title
+	desc = buff.1.desc
+	outcome = neutral
+	fire_only_once = yes
+	
+	dynamic_historical_event = {
+		tag = MYI
+		from = 1337.4.4
+		to = 1340.1.1
+		monthly_chance = 30
+	}
+
+	trigger = {
+		is_human = yes
+	}
+
+	illustration_tags = {
+        10 = happy
+        10 = interior
+    }
+
+	immediate = {
+	}
+	
+	option = {
+		name = buff.1.a
+		
+		add_gold = {
+			value = 750
+		}
+		location:bay = {
+			if = {
+				limit = {
+					location_rank = location_rank:rural_settlement
+				}
+				change_location_rank = location_rank:town
+			}
+			change_development  = development_severe_bonus
+			change_prosperity = prosperity_mild_bonus
+		}
+		location:kalapang = {
+			if = {
+				limit = {
+					location_rank = location_rank:rural_settlement
+				}
+				change_location_rank = location_rank:town
+			}
+		}
+	}
+}
+
+buff_zel.8 = { #Aceh buff
+	type = country_event
+	title = buff.1.title
+	desc = buff.1.desc
+	outcome = neutral
+	fire_only_once = yes
+	
+	dynamic_historical_event = {
+		tag = ATJ
+		from = 1337.4.4
+		to = 1340.1.1
+		monthly_chance = 30
+	}
+
+	trigger = {
+		is_human = yes
+	}
+
+	illustration_tags = {
+        10 = happy
+        10 = interior
+    }
+	
+	immediate = {
+	}
+	
+	option = {
+		name = buff.1.a
+		
+		add_gold = {
+			value = 1000
+		}
+		location:bandar_aceh = {
+			if = {
+				limit = {
+					location_rank = location_rank:rural_settlement
+				}
+				change_location_rank = location_rank:town
+			}
+			change_development  = development_severe_bonus
+			change_prosperity = prosperity_mild_bonus
+		}
+	}
+}
+
+buff_zel.9 = { #Dai Viet buff
+	type = country_event
+	title = buff.1.title
+	desc = buff.1.desc
+	outcome = neutral
+	fire_only_once = yes
+	
+	dynamic_historical_event = {
+		tag = DAI
+		from = 1337.4.4
+		to = 1340.1.1
+		monthly_chance = 30
+	}
+
+	trigger = {
+		is_human = yes
+	}
+
+	illustration_tags = {
+        10 = happy
+        10 = interior
+    }
+	
+	immediate = {
+	}
+	
+	option = {
+		name = buff.1.a
+
+		c:CHI = {
+			cancel_subject = c:DAI
+		}
+		c:CHI = {
+			cancel_subject = c:CHA
+		}
+	}
+}

@@ -1,0 +1,20 @@
+﻿allow_upstallesbam_parliament={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+allow_burmese_autocracy = {
+	boolean = yes
+	game_data = {
+		category = country
+	}
+}
+
+allow_sword_of_islam = {
+	boolean = yes
+	game_data = {
+		category = country
+	}
+}

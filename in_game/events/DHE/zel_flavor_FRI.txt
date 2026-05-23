@@ -1,0 +1,111 @@
+﻿namespace = zel_flavor_fri
+zel_flavor_fri.1 = { # 
+	type = country_event
+	title = zel_flavor_fri.1.title
+	desc = zel_flavor_fri.1.desc
+	outcome = neutral
+
+	fire_only_once = yes
+	dynamic_historical_event = {
+		tag = FRI
+		from = 1337.1.1
+		to = 1437.1.1
+		monthly_chance = 10
+	}
+
+	trigger = {
+		calc_true_if = {
+			amount >= 4
+			1 = {
+				location:zwolle = { is_owned_or_owned_by_subjects_or_below_of = root }
+			}
+			1 = {
+				location:deventer = { is_owned_or_owned_by_subjects_or_below_of = root }
+			}
+			1 = {
+				location:utrecht = { is_owned_or_owned_by_subjects_or_below_of = root }
+			}
+			1 = {
+				location:amsterdam = { is_owned_or_owned_by_subjects_or_below_of = root }
+			}
+			1 = {
+				location:dordrecht = { is_owned_or_owned_by_subjects_or_below_of = root }
+			}
+			1 = {
+				location:the_hague = { is_owned_or_owned_by_subjects_or_below_of = root }
+			}
+			1 = {
+				location:middelburg = { is_owned_or_owned_by_subjects_or_below_of = root }
+			}
+		}
+	}
+
+
+	illustration_tags = {
+		10 = angry
+		10 = interior
+	}
+
+	immediate = {
+		add_government_power = -10
+		if = {
+			limit = { is_owned_or_owned_by_subjects_or_below_of = root }
+			area:holland_area = {
+				add_core = root
+				change_location_owner = root
+			}
+		}
+
+		if = {
+			limit = { is_owned_or_owned_by_subjects_or_below_of = root }
+			area:friesland_area = {
+				add_core = root
+				change_location_owner = root
+			}
+		}
+
+		every_owned_location = {
+			every_pop = {
+				limit = {
+					OR = {
+						culture = culture:low_franconian
+						culture = culture:westphalian
+					}
+				}
+				change_pop_culture = root.culture
+			}
+		}
+	}
+
+	option = {
+		name = zel_flavor_fri.1.a
+
+		show_as_tooltip = {
+			add_government_power = -10
+			area:holland_area = {
+				limit = { is_owned_or_owned_by_subjects_or_below_of = root }
+				add_core = root
+				change_location_owner = root
+			}
+	
+			area:friesland_area = {
+				limit = { is_owned_or_owned_by_subjects_or_below_of = root }
+				add_core = root
+				change_location_owner = root
+			}
+	
+			every_owned_location = {
+				every_pop = {
+					limit = {
+						OR = {
+							culture = culture:low_franconian
+							culture = culture:westphalian
+						}
+					}
+					change_pop_culture = root.culture
+				}
+			}
+		}
+
+	}
+}

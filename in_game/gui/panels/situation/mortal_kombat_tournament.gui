@@ -1,0 +1,522 @@
+﻿situation_panel = {
+
+    blockoverride "situation_panel_image" {	
+	 	using = two_countries_header_template
+
+		block "two_countries_header_image" {
+			background = {
+				texture = "[GetSituationIllustration(SituationView.GetActiveSituation.GetSituation)]"
+
+				modify_texture = {
+					texture = "gfx/interface/component_masks/mask_fade_horizontal_middle.dds"
+					texture_density = 2
+					spriteType = stretched
+					spriteborder = { 250 250 }
+					blend_mode = alphamultiply
+					alpha = 0.4
+				}
+			}
+		}
+
+		blockoverride "FirstCountryVisible" {
+			visible = "[Not(IsDataModelEmpty(GetGlobalList('list_of_leagues')))]"
+		}
+		blockoverride "FirstCountryContext" {
+			using = strongest_league
+		}
+
+		blockoverride "SecondCountryVisible" {
+			visible = "[Not(IsDataModelEmpty(GetGlobalList('list_of_leagues')))]"
+		}
+
+		blockoverride "SecondCountryContext" {
+			using = second_strongest_league
+		}
+
+		# blockoverride "history_button_anchor" {}
+
+		blockoverride "first_character_portrait_anchor" {
+			parentanchor = bottom|left
+		}
+
+		blockoverride "second_character_portrait_anchor" {
+			parentanchor = bottom|right
+		}
+
+		blockoverride "character_religion_visibility" {
+			visible = no
+		}
+
+		blockoverride "character_name_maximumsize" {
+			maximumsize = { 270 -1 }
+		}
+
+		blockoverride "country_header_extra" {
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				margin = { 10 10 }
+				spacing = 8
+
+				expand = {}
+			}
+		}
+	}
+	
+    blockoverride "situation_subheader_extra"{
+		visible = no
+	}
+
+    blockoverride "situation_panel_main_content" {
+        situation_card_expandable = {
+
+            #Can we see this card? 
+            visible = "[GetUniqueInternationalOrganization('modded_league_1').Exists]"
+            
+            #What is the context of this card ?
+            datacontext = "[GetUniqueInternationalOrganization('modded_league_1')]"
+
+            blockoverride "header_button_onclick" {
+                onclick = "[GetVariableSystem.Toggle( 'modded_league_1_toggle' )]"
+            }
+
+            blockoverride "bottom_content_onclick" {
+                visible = "[GetVariableSystem.Exists( 'modded_league_1_toggle' )]"
+            }
+            blockoverride "icon_replace_visible_yes" {
+                visible = "[GetVariableSystem.Exists( 'modded_league_1_toggle' )]"
+            }
+            blockoverride "icon_replace_visible_not" {
+                visible = "[Not(GetVariableSystem.Exists( 'modded_league_1_toggle' ))]"
+            }
+
+            #Icon
+            blockoverride "header_icon" { 
+                texture = "[GetUniqueInternationalOrganization('modded_league_1').GetIcon]" 
+            }
+            
+            #Title
+            blockoverride "header_text" {
+                text = "[GetUniqueInternationalOrganization('modded_league_1').GetName]"
+            }
+
+            blockoverride "bottom_content" {
+                scrollarea = {
+                    layoutpolicy_horizontal = expanding
+                    autoresizescrollarea = yes
+                    scrollbarpolicy_horizontal = always_off
+                    scrollbar_vertical = {
+                        using = Scrollbar_Vertical
+                    }
+                    
+                    scrollwidget = {
+                        dynamicgridbox = {
+                            layoutpolicy_horizontal = expanding
+                            flipdirection = yes
+                            datamodel_wrap = 9
+                            maxhorizontalslots = 9
+                            datamodel = "[GetInternationalOrganization('modded_league_1').GetMembers]"
+                            item = {
+
+                                country_flag_small_plus = {}
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        situation_card_expandable = {	#Foreign League France
+
+            #Can we see this card? 
+            visible = "[GetUniqueInternationalOrganization('modded_league_2').Exists]"
+            
+            #What is the context of this card ?
+            datacontext = "[GetUniqueInternationalOrganization('modded_league_2')]"
+
+            blockoverride "header_button_onclick" {
+                onclick = "[GetVariableSystem.Toggle( 'modded_league_2_toggle' )]"
+            }
+
+            blockoverride "bottom_content_onclick" {
+                visible = "[GetVariableSystem.Exists( 'modded_league_2_toggle' )]"
+            }
+            blockoverride "icon_replace_visible_yes" {
+                visible = "[GetVariableSystem.Exists( 'modded_league_2_toggle' )]"
+            }
+            blockoverride "icon_replace_visible_not" {
+                visible = "[Not(GetVariableSystem.Exists( 'modded_league_2_toggle' ))]"
+            }
+
+            #Icon
+            blockoverride "header_icon" { 
+                texture = "[GetUniqueInternationalOrganization('modded_league_2').GetIcon]" 
+            }
+            
+            #Title
+            blockoverride "header_text" {
+                text = "[GetUniqueInternationalOrganization('modded_league_2').GetName]"
+            }
+
+            
+
+            blockoverride "bottom_content" {
+                scrollarea = {
+                    layoutpolicy_horizontal = expanding
+                    autoresizescrollarea = yes
+                    scrollbarpolicy_horizontal = always_off
+                    scrollbar_vertical = {
+                        using = Scrollbar_Vertical
+                    }
+                    
+                    scrollwidget = {
+                        dynamicgridbox = {
+                            layoutpolicy_horizontal = expanding
+                            flipdirection = yes
+                            datamodel_wrap = 9
+                            maxhorizontalslots = 9
+                            datamodel = "[GetInternationalOrganization('modded_league_2').GetMembers]"
+                            item = {
+
+                                country_flag_small_plus = {}
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        situation_card_expandable = {	#Foreign League HRE
+
+            #Can we see this card? 
+            visible = "[GetUniqueInternationalOrganization('modded_league_4').Exists]"
+            
+            #What is the context of this card ?
+            datacontext = "[GetUniqueInternationalOrganization('modded_league_4')]"
+
+            blockoverride "header_button_onclick" {
+                onclick = "[GetVariableSystem.Toggle( 'modded_league_4_toggle' )]"
+            }
+
+            blockoverride "bottom_content_onclick" {
+                visible = "[GetVariableSystem.Exists( 'modded_league_4_toggle' )]"
+            }
+            blockoverride "icon_replace_visible_yes" {
+                visible = "[GetVariableSystem.Exists( 'modded_league_4_toggle' )]"
+            }
+            blockoverride "icon_replace_visible_not" {
+                visible = "[Not(GetVariableSystem.Exists( 'modded_league_4_toggle' ))]"
+            }
+
+            #Icon
+            blockoverride "header_icon" { 
+                texture = "[GetUniqueInternationalOrganization('modded_league_4').GetIcon]" 
+            }
+            
+            #Title
+            blockoverride "header_text" {
+                text = "[GetUniqueInternationalOrganization('modded_league_4').GetName]"
+            }
+
+            
+
+            blockoverride "bottom_content" {
+                scrollarea = {
+                    layoutpolicy_horizontal = expanding
+                    autoresizescrollarea = yes
+                    scrollbarpolicy_horizontal = always_off
+                    scrollbar_vertical = {
+                        using = Scrollbar_Vertical
+                    }
+                    
+                    scrollwidget = {
+                        dynamicgridbox = {
+                            layoutpolicy_horizontal = expanding
+                            flipdirection = yes
+                            datamodel_wrap = 9
+                            maxhorizontalslots = 9
+                            datamodel = "[GetInternationalOrganization('modded_league_4').GetMembers]"
+                            item = {
+
+                                country_flag_small_plus = {}
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        situation_card_expandable = {	#Foreign League Iberia
+
+            #Can we see this card? 
+            visible = "[GetUniqueInternationalOrganization('modded_league_3').Exists]"
+            
+            #What is the context of this card ?
+            datacontext = "[GetUniqueInternationalOrganization('modded_league_3')]"
+
+            blockoverride "header_button_onclick" {
+                onclick = "[GetVariableSystem.Toggle( 'modded_league_3_toggle' )]"
+            }
+
+            blockoverride "bottom_content_onclick" {
+                visible = "[GetVariableSystem.Exists( 'modded_league_3_toggle' )]"
+            }
+            blockoverride "icon_replace_visible_yes" {
+                visible = "[GetVariableSystem.Exists( 'modded_league_3_toggle' )]"
+            }
+            blockoverride "icon_replace_visible_not" {
+                visible = "[Not(GetVariableSystem.Exists( 'modded_league_3_toggle' ))]"
+            }
+
+            #Icon
+            blockoverride "header_icon" { 
+                texture = "[GetUniqueInternationalOrganization('modded_league_3').GetIcon]" 
+            }
+            
+            #Title
+            blockoverride "header_text" {
+                text = "[GetUniqueInternationalOrganization('modded_league_3').GetName]"
+            }
+
+            
+
+            blockoverride "bottom_content" {
+                scrollarea = {
+                    layoutpolicy_horizontal = expanding
+                    autoresizescrollarea = yes
+                    scrollbarpolicy_horizontal = always_off
+                    scrollbar_vertical = {
+                        using = Scrollbar_Vertical
+                    }
+                    
+                    scrollwidget = {
+                        dynamicgridbox = {
+                            layoutpolicy_horizontal = expanding
+                            flipdirection = yes
+                            datamodel_wrap = 9
+                            maxhorizontalslots = 9
+                            datamodel = "[GetInternationalOrganization('modded_league_3').GetMembers]"
+                            item = {
+
+                                country_flag_small_plus = {}
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        situation_card_expandable = {	#First Italian League
+
+            #Can we see this card? 
+            visible = "[GetUniqueInternationalOrganization('modded_league_5').Exists]"
+            
+            #What is the context of this card ?
+            datacontext = "[GetUniqueInternationalOrganization('modded_league_5')]"
+
+            blockoverride "header_button_onclick" {
+                onclick = "[GetVariableSystem.Toggle( 'modded_league_5_toggled' )]"
+            }
+
+            blockoverride "bottom_content_onclick" {
+                visible = "[GetVariableSystem.Exists( 'modded_league_5_toggled' )]"
+            }
+            blockoverride "icon_replace_visible_yes" {
+                visible = "[GetVariableSystem.Exists( 'modded_league_5_toggled' )]"
+            }
+            blockoverride "icon_replace_visible_not" {
+                visible = "[Not(GetVariableSystem.Exists( 'modded_league_5_toggled' ))]"
+            }
+
+            #Icon
+            blockoverride "header_icon" { 
+                texture = "[GetUniqueInternationalOrganization('modded_league_5').GetIcon]" 
+            }
+            
+            #Title
+            blockoverride "header_text" {
+                text = "[GetUniqueInternationalOrganization('modded_league_5').GetName]"
+            }
+
+            
+
+            blockoverride "bottom_content" {
+                scrollarea = {
+                    layoutpolicy_horizontal = expanding
+                    autoresizescrollarea = yes
+                    scrollbarpolicy_horizontal = always_off
+                    scrollbar_vertical = {
+                        using = Scrollbar_Vertical
+                    }
+                    
+                    scrollwidget = {
+                        dynamicgridbox = {
+                            layoutpolicy_horizontal = expanding
+                            flipdirection = yes
+                            datamodel_wrap = 9
+                            maxhorizontalslots = 9
+                            datamodel = "[GetInternationalOrganization('modded_league_5').GetMembers]"
+                            item = {
+
+                                country_flag_small_plus = {}
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        situation_card_expandable = {	#Second Italian League
+
+            #Can we see this card? 
+            visible = "[GetUniqueInternationalOrganization('modded_league_6').Exists]"
+            
+            #What is the context of this card ?
+            datacontext = "[GetUniqueInternationalOrganization('modded_league_6')]"
+
+            blockoverride "header_button_onclick" {
+                onclick = "[GetVariableSystem.Toggle( 'modded_league_6_toggled' )]"
+            }
+
+            blockoverride "bottom_content_onclick" {
+                visible = "[GetVariableSystem.Exists( 'modded_league_6_toggled' )]"
+            }
+            blockoverride "icon_replace_visible_yes" {
+                visible = "[GetVariableSystem.Exists( 'modded_league_6_toggled' )]"
+            }
+            blockoverride "icon_replace_visible_not" {
+                visible = "[Not(GetVariableSystem.Exists( 'modded_league_6_toggled' ))]"
+            }
+
+            #Icon
+            blockoverride "header_icon" { 
+                texture = "[GetUniqueInternationalOrganization('modded_league_6').GetIcon]" 
+            }
+            
+            #Title
+            blockoverride "header_text" {
+                text = "[GetUniqueInternationalOrganization('modded_league_6').GetName]"
+            }
+
+            
+
+            blockoverride "bottom_content" {
+                scrollarea = {
+                    layoutpolicy_horizontal = expanding
+                    autoresizescrollarea = yes
+                    scrollbarpolicy_horizontal = always_off
+                    scrollbar_vertical = {
+                        using = Scrollbar_Vertical
+                    }
+                    
+                    scrollwidget = {
+                        dynamicgridbox = {
+                            layoutpolicy_horizontal = expanding
+                            flipdirection = yes
+                            datamodel_wrap = 9
+                            maxhorizontalslots = 9
+                            datamodel = "[GetInternationalOrganization('modded_league_6').GetMembers]"
+                            item = {
+
+                                country_flag_small_plus = {}
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        situation_card_expandable = {	#Third Italian League
+
+            #Can we see this card? 
+            visible = "[GetUniqueInternationalOrganization('modded_league_7').Exists]"
+            
+            #What is the context of this card ?
+            datacontext = "[GetUniqueInternationalOrganization('modded_league_7')]"
+
+            blockoverride "header_button_onclick" {
+                onclick = "[GetVariableSystem.Toggle( 'modded_league_7_toggled' )]"
+            }
+
+            blockoverride "bottom_content_onclick" {
+                visible = "[GetVariableSystem.Exists( 'modded_league_7_toggled' )]"
+            }
+            blockoverride "icon_replace_visible_yes" {
+                visible = "[GetVariableSystem.Exists( 'modded_league_7_toggled' )]"
+            }
+            blockoverride "icon_replace_visible_not" {
+                visible = "[Not(GetVariableSystem.Exists( 'modded_league_7_toggled' ))]"
+            }
+
+            #Icon
+            blockoverride "header_icon" { 
+                texture = "[GetUniqueInternationalOrganization('modded_league_7').GetIcon]" 
+            }
+            
+            #Title
+            blockoverride "header_text" {
+                text = "[GetUniqueInternationalOrganization('modded_league_7').GetName]"
+            }
+
+            
+
+            blockoverride "bottom_content" {
+                scrollarea = {
+                    layoutpolicy_horizontal = expanding
+                    autoresizescrollarea = yes
+                    scrollbarpolicy_horizontal = always_off
+                    scrollbar_vertical = {
+                        using = Scrollbar_Vertical
+                    }
+                    
+                    scrollwidget = {
+                        dynamicgridbox = {
+                            layoutpolicy_horizontal = expanding
+                            flipdirection = yes
+                            datamodel_wrap = 9
+                            maxhorizontalslots = 9
+                            datamodel = "[GetInternationalOrganization('modded_league_7').GetMembers]"
+                            item = {
+
+                                country_flag_small_plus = {}
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+template strongest_league {
+	# this gives us the biggest IO
+	datacontext_from_model = {
+		datamodel = "[GetGlobalList('list_of_leagues')]"
+		index = 0
+	}
+	# this gives us the first member country
+	datacontext_from_model = {
+		datamodel = "[Scope.GetInternationalOrganization.GetMembers]"
+		index = 0
+	}
+}
+
+template second_strongest_league {
+	# this gives us the biggest IO
+	datacontext_from_model = {
+		datamodel = "[GetGlobalList('list_of_leagues')]"
+		index = 1
+	}
+	# this gives us the first member country
+	datacontext_from_model = {
+		datamodel = "[Scope.GetInternationalOrganization.GetMembers]"
+		index = 0
+	}
+}

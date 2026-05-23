@@ -2,6 +2,8 @@
 
 	international_organization_type = catholic_church
 
+	show_message = no
+
 	potential = {
 		papacy_active = yes
 	}
@@ -233,6 +235,13 @@
 					location = scope:target_location
 					religions = { religion:catholic }
 				}
+			}
+		}
+		religion:catholic = {
+			add_religion_modifier = {
+				modifier = proclaim_holy_site
+				years = 50
+				mode = replace
 			}
 		}
 	}

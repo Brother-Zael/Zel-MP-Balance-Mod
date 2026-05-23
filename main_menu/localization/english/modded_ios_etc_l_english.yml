@@ -1,0 +1,76 @@
+﻿l_english:
+
+ zel_mutual_offense_law: "Mutual Offense Policy"
+ zel_mutual_offense_law_desc: "All members of this league will have equal chance to join offensive wars."
+
+ zel_mutual_defense_law: "Mutual Defense Policy"
+ zel_mutual_defense_law_desc: "All members of this league will have equal chance to join defensive wars." 
+
+ zel_possible_defense_policy: "Not One Step Back!"
+ zel_possible_defense_policy_desc: "Traitors will be shot."
+
+ zel_possible_offense_policy: "Give War a Chance!"
+ zel_possible_offense_policy_desc: "What is it good for?"
+
+ modded_league_1: "First Zaelian League"
+ modded_league_1_desc: "A mighty Zaelian League, striving to be the premier global power."
+
+ modded_league_2: "Second Zaelian League"
+ modded_league_2_desc: "A mighty Zaelian League, striving to be the premier global power."
+
+ modded_league_3: "Third Zaelian League"
+ modded_league_3_desc: "A mighty Zaelian League, striving to be the premier global power."
+
+ modded_league_4: "Fourth Zaelian League"
+ modded_league_4_desc: "A mighty Zaelian League, striving to be the premier global power."
+
+ modded_league_5: "Fifth Zaelian League"
+ modded_league_5_desc: "A mighty Zaelian League, striving to be the premier global power."
+
+ modded_league_6: "Sixth Zaelian League"
+ modded_league_6_desc: "A mighty Zaelian League, striving to be the premier global power."
+
+ modded_league_7: "Seventh Zaelian League"
+ modded_league_7_desc: "A mighty Zaelian League, striving to be the premier global power."
+ 
+ diplomatic_status_modded_league_1_name: "In the First Zaelian League"
+ diplomatic_status_modded_league_1_tooltip: "This country is in the first Zaelian League."
+
+ diplomatic_status_modded_league_2_name: "In the Second Zaelian League"
+ diplomatic_status_modded_league_2_tooltip: "This country is in the second Zaelian League."
+
+ diplomatic_status_modded_league_3_name: "In the Third Zaelian League"
+ diplomatic_status_modded_league_3_tooltip: "This country is in the third Zaelian League."
+
+ diplomatic_status_modded_league_4_name: "In the Fourth Zaelian League"
+ diplomatic_status_modded_league_4_tooltip: "This country is in the fourth Zaelian League."
+
+ diplomatic_status_modded_league_5_name: "In the Fifth Zaelian League"
+ diplomatic_status_modded_league_5_tooltip: "This country is in the fifth Zaelian League."
+
+ diplomatic_status_modded_league_6_name: "In the Sixth Zaelian League"
+ diplomatic_status_modded_league_6_tooltip: "This country is in the sixth Zaelian League."
+
+ diplomatic_status_modded_league_7_name: "In the Seventh Zaelian League"
+ diplomatic_status_modded_league_7_tooltip: "This country is in the seventh Zaelian League."
+
+ io_opinion_modded_league_1: "Member of the same Zaelian League"
+ io_opinion_modded_league_2: "$io_opinion_modded_league_1$"
+ io_opinion_modded_league_3: "$io_opinion_modded_league_1$"
+ io_opinion_modded_league_4: "$io_opinion_modded_league_1$"
+ io_opinion_modded_league_5: "$io_opinion_modded_league_1$"
+ io_opinion_modded_league_6: "$io_opinion_modded_league_1$"
+ io_opinion_modded_league_7: "$io_opinion_modded_league_1$"
+
+ modded_league_1_list_who_tt: "Modded league 1 list who tt"
+ modded_league_2_list_who_tt: "Modded league 2 list who tt"
+ modded_league_3_list_who_tt: "Modded league 3 list who tt"
+ modded_league_4_list_who_tt: "Modded league 4 list who tt"
+ modded_league_5_list_who_tt: "Modded league 5 list who tt"
+ modded_league_6_list_who_tt: "Modded league 6 list who tt"
+ modded_league_7_list_who_tt: "Modded league 7 list who tt"
+ 
+ mortal_kombat_tournament: "Mortal Kombat"
+ mortal_kombat_tournament_desc: "MORTAL KOOOOOOOOOOMBAAAAAAAAAAAAAAAAT"
+ 
+ mortal_kombat_membership_tt: "Is NOT already [member|e] of any such an [international_organization|e]"

@@ -1,0 +1,7 @@
+﻿io_opinion_modded_league_1 = { value = 20 }
+io_opinion_modded_league_2 = { value = 20 }
+io_opinion_modded_league_3 = { value = 20 }
+io_opinion_modded_league_4 = { value = 20 }
+io_opinion_modded_league_5 = { value = 20 }
+io_opinion_modded_league_6 = { value = 20 }
+io_opinion_modded_league_7 = { value = 20 }

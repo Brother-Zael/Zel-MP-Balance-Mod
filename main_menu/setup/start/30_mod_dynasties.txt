@@ -1,5 +1,4 @@
 dynasty_manager = {
-	default_dynasty = { name = { name = default_dynasty } home = vattnajokull }
 	
 	estevez_dynasty = { 
 		name = { name = estevez_dynasty }

@@ -5,6 +5,27 @@
 	}
 	levy_combat_efficiency_modifier = -0.8
 	land_morale_modifier = -0.2
-	mercenary_maintenance_cost = 0.5
+	mercenary_maintenance_efficiency = -0.5
 	hire_mercenary_premium_cost_modifier = 0.25
+}
+
+zel_france_trib = {
+	game_data = {
+		category = country
+	}
+	allow_tributary_subject = yes
+}
+
+proclaim_holy_site = {
+	game_data = {
+		category = religion
+	}
+	monthly_war_exhaustion = -0.02
+}
+
+zel_ser_nov_mine = {
+	game_data = {
+		category = location
+	}
+	local_max_rgo_size = 4
 }

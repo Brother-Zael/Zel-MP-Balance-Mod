@@ -1,0 +1,727 @@
+﻿# FRISIAN ADVANCES
+############################
+# age_2_renaissance (1337-1437)
+############################
+zel_fri_haadlingen = {
+	age = age_2_renaissance
+	potential = { has_or_had_tag = FRI }
+    requires = abolished_serfdom
+
+    nobles_estate_max_tax = 0.1
+}
+
+zel_fri_upstallesbam = {
+    age = age_2_renaissance
+	potential = { has_or_had_tag = FRI }
+    requires = zel_fri_haadlingen
+
+    allow_upstallesbam_parliament = yes
+}
+
+############################
+# age_3_discovery (1437-1537)
+############################
+zel_fri_hollandic_wars = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = FRI }
+    requires = fort_limit_3_advance
+
+    monthly_army_tradition = 0.05
+}
+
+zel_fri_fishers = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = FRI }
+    requires = trading_hub_advance
+
+    global_fish_output_modifier = 0.25
+    global_salt_output_modifier = 0.25
+}
+
+############################
+# age_4_reformation (1537-1637)
+############################
+zel_fri_kill_saxons = { # "Spill Saxon Blood" - the duchy historically was conquered by Albret of Saxony-Miessen
+	age = age_4_reformation
+	potential = { has_or_had_tag = FRI }
+    requires = bastion_advance
+
+    global_garrison_size_modifier = 0.25
+    monthly_towards_defensive = 0.1
+}
+
+# OMAN ADVANCES
+
+############################
+# age_2_renaissance (1337-1437)
+############################
+zel_oma_frankincense = {
+	age = age_2_renaissance
+	potential = { has_or_had_tag = OMA }
+    requires = muslim_caravans
+
+    global_clergy_max_literacy = 5
+    clergy_estate_target_satisfaction = 0.1
+}
+
+############################
+# age_3_discovery (1437-1537)
+############################
+zel_oma_imamate = {
+	age = age_3_discovery
+	potential = { has_or_had_tag = OMA }
+    requires = islamic_schoolars
+
+    global_pop_conversion_speed = 0.01
+    monthly_towards_jurisprudence = 0.05
+}
+
+############################
+# age_4_reformation (1537-1637)
+############################
+zel_oma_portuguese = {
+	age = age_4_reformation
+	potential = { has_or_had_tag = OMA }
+    requires = riches_of_foreign_coasts
+
+    navy_heavy_ship_power = 0.05
+}
+
+# AJURAN ADVANCES
+
+############################
+# age_2_renaissance (1337-1437)
+############################
+zel_aju_water_dynasty = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = AJU }
+    requires = pound_lock_canals_advance
+
+    global_monthly_development = 0.001
+}
+
+zel_aju_trader = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = AJU }
+    requires = unlock_hulk_advance
+
+    trade_sea_efficiency = 0.2
+}
+
+zel_aju_maritime = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = AJU }
+    requires = zel_aju_trader
+
+    global_maritime_presence_modifier = 0.1
+}
+
+############################
+# age_3_discovery (1437-1537)
+############################
+
+zel_aju_nomads_I = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = AJU }
+    requires = trade_through_owned_disc_advance
+
+    global_livestock_output_modifier = 0.33
+    global_cotton_output_modifier = 0.1
+}
+
+zel_aju_nomads_II = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = AJU }
+    requires = zel_aju_nomads_I
+
+    army_light_cavalry_power = 0.1
+}
+
+############################
+# age_4_reformation (1537-1637)
+############################
+zel_aju_army = {
+	age = age_4_reformation
+	potential = { has_or_had_tag = AJU }
+    requires = gunpowder_empires
+
+    military_tactics = 0.1
+}
+
+############################
+# age_5_absolutism (1637-1737)
+############################
+zel_aju_madow_wars = {
+	age = age_5_absolutism
+	potential = { has_or_had_tag = AJU }
+    requires = global_supply_limit_modifier_advance_5
+
+    monthly_war_exhaustion = -0.02
+    global_pop_conversion_speed_modifier = 0.1
+    global_pop_assimilation_speed_modifier = 0.1
+}
+
+# SINDH ADVANCES
+
+############################
+# age_1_traditions (1337)
+############################
+zel_snd_islam = {
+	age = age_1_traditions
+	potential = { has_or_had_tag = SND }
+	requires = zakah
+
+    tolerance_heathen = 1
+    global_pop_conversion_speed_modifier = 0.1
+}
+
+############################
+# age_2_renaissance (1337-1437)
+############################
+zel_snd_ancestry = {
+	age = age_2_renaissance
+	potential = { has_or_had_tag = SND }
+    requires = cultural_melting_pot
+
+    global_pop_assimilation_speed_modifier = 0.25
+}
+
+zel_snd_syncretism = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = SND }
+    requires = imamate
+
+    tolerance_heathen = 1
+}
+
+zel_snd_gujdiplo = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = SND }
+    requires = local_nobility
+
+    diplomatic_reputation = 2
+}
+
+############################
+# age_3_discovery (1437-1537)
+############################
+zel_snd_indoislmaic = {
+	age = age_3_discovery
+	potential = {
+        OR = {
+            has_or_had_tag = SND
+            has_or_had_tag = SMA
+        }
+    }
+    requires = artists_advance_discovery
+
+    global_build_buildings_cost = -0.1
+    monthly_prestige = 0.05
+}
+
+zel_snd_border_guards = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = SND }
+    requires = fort_limit_3_advance
+
+    global_defensive = 0.1
+    global_hostile_attrition = 0.5
+}
+
+############################
+# age_4_reformation (1537-1637)
+############################
+
+zel_snd_thatta = {
+    age = age_4_reformation
+    potential = {
+        OR = {
+            has_or_had_tag = SND
+            has_or_had_tag = SMA
+        }
+     }
+     requires = town_rights_ref_advance
+
+     global_max_urban_control = 0.05
+}
+
+# MEWAR ADVANCES
+
+############################
+# age_1_traditions (1337)
+############################
+zel_mew_mew = {
+    age = age_1_traditions
+    potential = { has_or_had_tag = MEW }
+    requires = scholasticism
+
+    monthly_legitimacy = 0.05
+    global_manpower_modifier = 0.02
+}
+
+############################
+# age_2_renaissance (1337-1437)
+############################
+zel_mew_rana = { #Rule of Rana Kshetra Singh
+    age = age_2_renaissance
+    potential = { has_or_had_tag = MEW }
+    requires = war_no_cb_cost_modifier_renaissance_advance
+
+    global_integration_speed_modifier = 0.1
+}
+
+zel_mew_hindu_defenders = {
+    age = age_2_renaissance
+    potential = {
+        has_or_had_tag = MEW
+        religion = religion:hindu
+    }
+    requires = purana
+
+    tolerance_own = 1
+    global_hostile_attrition = 0.5
+}
+
+zel_mew_warrior_nation = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = MEW }
+    requires = raj_reorganized_rajput_regiments
+
+    army_maintenance_efficiency = 0.1
+}
+
+############################
+# age_3_discovery (1437-1537)
+############################
+zel_mew_favoring_hindus = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = MEW }
+    requires = cabinet_laws_advance
+
+    nobles_estate_target_satisfaction = 0.1
+    tolerance_heathen = -1
+}
+
+# RAJPUTANA ADVANCES
+
+############################
+# age_3_discovery (1437-1537)
+############################
+zel_rjp_gunsoftheraj = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = RJP }
+    requires = unlock_matchlock_levy
+
+    army_artillery_power = 0.1
+}
+
+############################
+# age_4_reformation (1537-1637)
+############################
+zel_rjp_mining = {
+    age = age_4_reformation
+    potential = { has_or_had_tag = RJP }
+    requires = reduce_inflations_advance
+
+    minting_inflation_threshold = 0.02
+}
+
+# SAPTAGRAM ADVANCES
+
+############################
+# age_1_traditions (1337)
+############################
+zel_stn_ilyasshahi = {
+	age = age_1_traditions
+	potential = { has_or_had_tag = STN }
+	requires = feudalism_advance
+
+    monthly_legitimacy = 0.05
+    global_war_score_efficiency = 0.05
+}
+
+############################
+# age_2_renaissance (1337-1437)
+############################
+zel_stn_satgaon_adm = {
+	age = age_2_renaissance
+	potential = { has_or_had_tag = STN }
+    requires = bureaucracy_law_advance
+
+    wetlands_proximity_impact = -0.15
+}
+
+# BENGAL ADVANCES
+
+############################
+# age_2_renaissance (1337-1437)
+############################
+zel_bng_shelltrade = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = BNG }
+    requires = protected_harbor_advance
+
+    trade_range_modifier = 0.33
+    diplomatic_range_modifier = 0.33
+}
+
+zel_bng_army_of_shahi = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = BNG }
+    requires = bng_war_elephants
+
+    army_light_cavalry_maintenance_cost_modifier = -0.25
+    army_heavy_cavalry_maintenance_cost_modifier = -0.25
+}
+
+############################
+# age_4_reformation (1537-1637)
+############################
+zel_bng_control_arakhan = {
+	age = age_4_reformation
+	potential = { has_or_had_tag = BNG }
+    requires = reformation_subject_opinions_advance
+
+    subject_loyalty = 10
+    subject_income_modifier = 0.1
+}
+
+# PINYA ADVANCES
+
+############################
+# age_2_renaissance (1337-1437)
+############################
+zel_pin_drought_migrations = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = PIN }
+    requires = fertile_lands
+
+    global_migration_speed_modifier = 0.33
+}
+
+zel_pin_defend_from_shan = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = PIN }
+    requires = drill_army_advance
+
+    army_heavy_infantry_power = 0.15
+}
+
+zel_pin_reestablish_control = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = PIN }
+    requires = pop_promote_actions_advance
+
+    diplomatic_annexation_cost = -0.15
+}
+
+############################
+# age_3_discovery (1437-1537)
+############################
+zel_pin_miracle_of_survival = {
+	age = age_3_discovery
+	potential = { has_or_had_tag = PIN }
+    requires = formalized_relations
+
+    stability_investment = large_stability_investment
+}
+
+zel_pin_burmese_ascendency = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = PIN }
+    requires = diplomatic_training
+
+    cultural_influence_modifier = 0.1
+    global_pop_assimilation_speed_modifier = 0.2
+}
+
+############################
+# age_4_reformation (1537-1637)
+############################
+zel_pin_valley_march = {
+    age = age_4_reformation
+    potential = { has_or_had_tag = PIN }
+    requires = unlock_baggage_train
+
+    land_morale_movement_cost = -0.0001
+}
+
+zel_pin_burmese_autocracy = {
+    age = age_4_reformation
+    potential = { has_or_had_tag = PIN }
+    requires = early_modern_administation
+
+    allow_burmese_autocracy = yes
+}
+
+# SUKHOTHAI ADVANCES
+############################
+# age_2_renaissance (1337-1437)
+############################
+zel_suk_freedom_fighters = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = SUK }
+    requires = war_no_cb_cost_modifier_renaissance_advance
+
+    land_morale_modifier = 0.1
+}
+
+############################
+# age_3_discovery (1437-1537)
+############################
+zel_suk_front_palace = {
+	age = age_3_discovery
+	potential = { has_or_had_tag = SUK }
+    requires = power_projection_advance_4
+
+    global_crown_estate_power = 0.1
+}
+
+zel_suk_legacy = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = SUK }
+    requires = foreign_cultural_law_advance
+
+    monthly_prestige = 0.05
+    cultural_tradition_modifier = 0.1
+}
+
+# DAI VIET ADVANCES
+
+############################
+# age_1_traditions (1337)
+############################
+zel_dai_history = {
+    age = age_1_traditions
+    potential = { has_or_had_tag = DAI }
+    requires = diplomatic_capacity_traditions
+
+    cultural_influence_modifier = 0.2
+}
+
+############################
+# age_3_discovery (1437-1537)
+############################
+zel_dai_champa = {
+	age = age_3_discovery
+	potential = { has_or_had_tag = DAI }
+    requires = colonial_policy_advance
+
+    global_pop_assimilation_speed_modifier = 0.33
+    cultures_capacity = -1
+}
+
+zel_dai_le_reforms = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = DAI }
+    requires = printing_press_shop_advance
+
+    global_max_literacy = 5
+}
+
+# MA-I ADVANCES
+############################
+# age_1_traditions (1337)
+############################
+zel_myi_cotton_shirts = {
+    age = age_1_traditions
+    potential = { has_or_had_tag = MYI }
+    requires = peasant_connections_advance
+
+    global_cotton_output_modifier = 0.1
+    land_morale_modifier = 0.05
+}
+
+############################
+# age_2_renaissance (1337-1437)
+############################
+zel_myi_chi_trade = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = MYI }
+    requires = merchant_power_from_maritime_renaissance_advance
+
+    navy_light_ship_build_cost_modifier = -0.1
+    global_beeswax_output_modifier = 0.33
+    global_clay_output_modifier = 0.33
+}
+
+zel_myi_song_to_ming = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = MYI }
+    requires = cultural_melting_pot
+
+    stability_investment = 0.02
+}
+
+zel_myi_bahay_kubo = {
+    age = age_2_renaissance
+    potential = { 
+        OR = {
+            has_or_had_tag = PGS
+            has_or_had_tag = TDO
+            has_or_had_tag = MNA
+            has_or_had_tag = CNT
+            has_or_had_tag = MYI
+            has_or_had_tag = TYY
+            has_or_had_tag = IBL
+            has_or_had_tag = MDY
+            has_or_had_tag = CEB
+            has_or_had_tag = BOL
+            has_or_had_tag = BTU
+            has_or_had_tag = SML
+            has_or_had_tag = LNO
+            has_or_had_tag = MGD
+            has_or_had_tag = KIM
+        }
+     }
+    requires = global_supply_limit_modifier_advance_2
+
+    global_devastation_recovery = 0.1
+    colonial_maintenance_cost = -0.25
+}
+
+zel_myi_bayan = {
+    age = age_2_renaissance
+    potential = { 
+        OR = {
+            has_or_had_tag = PGS
+            has_or_had_tag = TDO
+            has_or_had_tag = MNA
+            has_or_had_tag = CNT
+            has_or_had_tag = MYI
+            has_or_had_tag = TYY
+            has_or_had_tag = IBL
+            has_or_had_tag = MDY
+            has_or_had_tag = CEB
+            has_or_had_tag = BOL
+            has_or_had_tag = BTU
+            has_or_had_tag = SML
+            has_or_had_tag = LNO
+            has_or_had_tag = MGD
+            has_or_had_tag = KIM
+        }
+     }
+     requires = zel_myi_bahay_kubo
+
+     global_monthly_development = 0.001
+}
+
+############################
+# age_3_discovery (1437-1537)
+############################
+zel_myi_bay_to_min = {
+	age = age_3_discovery
+	potential = { has_or_had_tag = MYI }
+    requires = trading_hub_advance
+
+    global_maritime_presence_modifier = 0.33
+    navy_light_ship_build_cost_modifier = -0.1
+}
+
+zel_myi_southern_trade = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = MYI }
+    requires = zel_myi_bay_to_min
+
+    trade_range = 250
+}
+
+zel_myi_continental_trade = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = MYI }
+    requires = zel_myi_bay_to_min
+
+    trade_sea_efficiency = 0.33
+}
+
+############################
+# age_4_reformation (1537-1637)
+############################
+zel_myi_resist_spaniards = {
+	age = age_4_reformation
+	potential = { has_or_had_tag = myi }
+    requires = naval_battery_advance
+
+    naval_damage_done = 0.15
+}
+
+# ACEH ADVANCES
+
+############################
+# age_1_traditions (1337)
+############################
+zel_atj_islam = {
+	age = age_1_traditions
+	potential = { has_or_had_tag = ATJ }
+    requires = people_of_allah
+
+    clergy_estate_target_satisfaction = 0.1
+}
+
+zel_atj_sword_of_islam = {
+    age = age_1_traditions
+    potential = { has_or_had_tag = ATJ }
+    requires = zel_atj_islam
+
+    allow_sword_of_islam = yes
+}
+
+############################
+# age_2_renaissance (1337-1437)
+############################
+zel_atj_mighty_fleet = {
+	age = age_2_renaissance
+	potential = { has_or_had_tag = ATJ }
+    requires = naval_repair_ren
+
+    ship_build_speed = 0.2
+}
+
+zel_atj_islamic_empire = {
+    age = age_2_renaissance
+    potential = {
+        has_or_had_tag = ATJ
+        religion.group = religion_group:muslim
+    }
+    requires = zel_atj_mighty_fleet
+
+    monthly_towards_jurisprudence = 0.1
+}
+
+zel_atj_indo_islamic_trade = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = ATJ }
+    requires = zel_atj_islamic_empire
+
+    minting_inflation_threshold = 0.01
+}
+
+############################
+# age_3_discovery (1437-1537)
+############################
+zel_atj_conquer_pahang = {
+	age = age_3_discovery
+	potential = { has_or_had_tag = ATJ }
+    requires = new_currency_demands
+
+    global_tin_output_modifier = 0.1
+}
+
+zel_atj_arabic_diplomats = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = ATJ }
+    requires = islamic_schoolars
+
+    antagonism_monthly_change_modifier = 0.05
+}
+
+############################
+# age_4_reformation (1537-1637)
+############################
+zel_atj_ottoman_relief = {
+    age = age_4_reformation
+    potential = { has_or_had_tag = ATJ }
+    requires = unlock_galleon_advance
+
+    global_firearms_output_modifier = 0.1
+}

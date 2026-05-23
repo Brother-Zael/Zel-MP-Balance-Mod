@@ -1,0 +1,52 @@
+﻿supply_depot_advance_age_1_traditions = {
+	age = age_1_traditions
+			
+	supply_depot_capacity = 225
+		
+	requires = peasant_connections_advance
+}
+
+REPLACE:supply_depot_advance_age_2_renaissance = {
+	age = age_2_renaissance
+			
+	supply_depot_capacity = 250
+		
+	requires = regiment_reinforcement_speed_renaissance
+}
+
+REPLACE:supply_depot_advance_age_3_discovery = {
+	age = age_3_discovery
+	icon = global_supply_limit_modifier_advance_5
+			
+	supply_depot_capacity = 250
+		
+	requires = pike_and_shot_advance
+}
+
+REPLACE:supply_depot_advance_age_4_reformation = {
+	age = age_4_reformation
+	icon = zmw_merchant_taxes
+			
+	supply_depot_capacity = 250
+		
+	requires = correct_box_advance_reformation
+}
+
+REPLACE:supply_depot_advance_age_5_absolutism = {
+	age = age_5_absolutism
+	icon = merchants_and_trade
+			
+	supply_depot_capacity = 250
+	trade_company_headquarters_level = 1
+		
+	requires = absolutism_agressive_advance
+}
+
+REPLACE:supply_depot_advance_age_6_revolutions = {
+	age = age_6_revolutions
+	icon = zmw_merchant_taxes
+			
+	supply_depot_capacity = 250
+		
+	requires = artillery_vs_fort_age_6_revolutions
+}

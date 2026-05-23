@@ -1,0 +1,11 @@
+﻿zel_fri_upstallesbam_parliament = { #enables force_parliament_issue
+	type = country
+	potential = {
+		modifier:allow_upstallesbam_parliament = yes		
+	}
+	modifier = {
+		has_a_parliamentary_system = yes
+		global_crown_estate_power = 0.2
+		peasants_estate_agenda_impact = 1
+	}
+}

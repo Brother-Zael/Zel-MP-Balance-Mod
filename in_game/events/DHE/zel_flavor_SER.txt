@@ -1,0 +1,70 @@
+﻿namespace = flavor_ser
+REPLACE:flavor_ser.110 = { #Novo Brdo grows
+	hide_portraits = yes
+	type = country_event
+	title = flavor_ser.110.title
+	desc = flavor_ser.110.desc
+	outcome = neutral
+
+	fire_only_once = yes
+	dynamic_historical_event = {
+		tag = SER
+		from = 1387.1.1
+		monthly_chance = 10
+	}
+
+	trigger = {
+		owns = location:novo_brdo
+		location:novo_brdo = {
+			population >= 10
+			NOR = {
+				location_rank = location_rank:town
+				location_rank = location_rank:city
+			}
+		}
+	}
+
+	immediate = {
+		ruler ?= {
+			save_scope_as = target_character
+		}
+		location:novo_brdo = {
+			if = {
+				limit = {
+					location_rank = location_rank:rural_settlement
+				}
+				change_location_rank = location_rank:town
+			}
+			change_development  = development_severe_bonus
+			change_prosperity = prosperity_mild_bonus
+			add_location_modifier = {
+				modifier = zel_ser_nov_mine
+				years = -1
+				mode = add
+			}
+		}
+	}
+
+	option = {
+		name = flavor_ser.110.a
+		historical_option = yes
+		show_as_tooltip = {
+			location:novo_brdo = {
+				if = {
+					limit = {
+						location_rank = location_rank:rural_settlement
+					}
+					change_location_rank = location_rank:town
+				}
+				change_development  = development_severe_bonus
+				change_prosperity = prosperity_mild_bonus
+				add_location_modifier = {
+					modifier = zel_ser_nov_mine
+					years = -1
+					mode = add
+				}
+			}
+		}
+	}
+
+}
