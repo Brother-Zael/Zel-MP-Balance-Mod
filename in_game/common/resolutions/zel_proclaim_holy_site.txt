@@ -25,7 +25,7 @@
 		}
 	}
 
-	cooldown = { type = proclaim_holy_site years = 50 }
+	cooldown = { type = proclaim_holy_site years = 30 }
 
 	can_vote = {
 		international_organization:catholic_church = {
