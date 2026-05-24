@@ -47,22 +47,23 @@ zel_flavor_fri.1 = { #
 	}
 
 	immediate = {
-		add_government_power = -10
-		if = {
-			limit = { is_owned_or_owned_by_subjects_or_below_of = root }
-			area:holland_area = {
-				add_core = root
+		add_government_power = -33
+
+
+		area:holland_area = {
+			every_location_in_area = {
+				limit = { is_owned_or_owned_by_subjects_or_below_of = root }
 				change_location_owner = root
 			}
 		}
 
-		if = {
-			limit = { is_owned_or_owned_by_subjects_or_below_of = root }
-			area:friesland_area = {
-				add_core = root
+		area:friesland_area = {
+			every_location_in_area = {
+				limit = { is_owned_or_owned_by_subjects_or_below_of = root }
 				change_location_owner = root
 			}
 		}
+
 
 		every_owned_location = {
 			every_pop = {
@@ -81,17 +82,19 @@ zel_flavor_fri.1 = { #
 		name = zel_flavor_fri.1.a
 
 		show_as_tooltip = {
-			add_government_power = -10
+			add_government_power = -33
 			area:holland_area = {
-				limit = { is_owned_or_owned_by_subjects_or_below_of = root }
-				add_core = root
-				change_location_owner = root
+				every_location_in_area = {
+					limit = { is_owned_or_owned_by_subjects_or_below_of = root }
+					change_location_owner = root
+				}
 			}
 	
 			area:friesland_area = {
-				limit = { is_owned_or_owned_by_subjects_or_below_of = root }
-				add_core = root
-				change_location_owner = root
+				every_location_in_area = {
+					limit = { is_owned_or_owned_by_subjects_or_below_of = root }
+					change_location_owner = root
+				}
 			}
 	
 			every_owned_location = {
