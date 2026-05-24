@@ -141,7 +141,7 @@ zel_flavor_fra.2 = { #
 			}
 			province_definition:nimois_province = {
 				every_location_in_province_definition = {
-					limit = { NOT = { scope:location = location:montpellier } }
+					limit = { NOT = { owner = c:MLL } }
 					change_location_owner = c:NRB
 					add_core = c:NRB
 				}
@@ -178,14 +178,14 @@ zel_flavor_fra.2 = { #
 			}
 			province_definition:toulousain_province = {
 				every_location_in_province_definition = {
-					limit = { NOT = { scope:location = location:toulouse } }
+					limit = { NOT = { this = location:toulouse } }
 					change_location_owner = c:FOI
 					add_core = c:FOI
 				}
 			}
 			province_definition:bazadais_province = {
 				every_location_in_province_definition = {
-					limit = { NOT = { scope:location = location:belin } }
+					limit = { NOT = { owner = c:AQN } }
 					change_location_owner = c:FOI
 					add_core = c:FOI
 				}
