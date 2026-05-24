@@ -725,3 +725,56 @@ zel_atj_ottoman_relief = {
 
     global_firearms_output_modifier = 0.1
 }
+
+# GURGAN ADVANCES
+
+############################
+# age_1_traditions (1337)
+############################
+zel_grg_last_borjigin = {
+    age = age_1_traditions
+    potential = { has_or_had_tag = GRG }
+    requires = guilds
+
+    subject_opinions = 25
+    monthly_horde_unity = 0.1
+}
+
+############################
+# age_2_renaissance (1337-1437)
+############################
+zel_grg_horses = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = GRG }
+    requires = zel_grg_grazelands
+
+    army_light_cavalry_power = 0.2
+}
+
+zel_grg_grazelands = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = GRG }
+    requires = fertile_lands
+    
+    food_production = 0.1
+}
+
+zel_grg_original_timur = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = GRG }
+    requires = muslim_lineage
+
+    country_cabinet_efficiency = 0.1
+}
+
+############################
+# age_3_discovery (1437-1537)
+############################
+zel_grg_shia_converts = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = GRG }
+    requires = global_clergy_max_literacy_advance
+
+    monthly_towards_mysticism = 0.2
+    monthly_towards_humanist = 0.2
+}

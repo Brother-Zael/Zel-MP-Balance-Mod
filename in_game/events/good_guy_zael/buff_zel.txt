@@ -221,6 +221,17 @@ buff_zel.4 = { #Gurgan buff
 	option = {
 		name = buff.1.a
 		
+		location:gorgan = {
+			if = {
+				limit = {
+					location_rank = location_rank:rural_settlement
+				}
+				change_location_rank = location_rank:town
+			}
+			change_development  = development_severe_bonus
+			change_prosperity = prosperity_mild_bonus
+		}
+
 		province_definition:rey_province = {
 			every_location_in_province_definition = {
 				limit = {
