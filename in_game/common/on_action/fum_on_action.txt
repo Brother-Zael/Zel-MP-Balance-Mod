@@ -1,0 +1,100 @@
+﻿four_yearly_country_pulse = {
+	on_actions = { fum_clear_situations fum_character_culling }
+}
+
+yearly_country_pulse = {
+	on_actions = { fum_meritocracy_spread }
+}
+
+monthly_country_pulse = {
+	on_actions = {
+		fum_iterate_robber_barons
+		fum_stop_robber_barons
+	}
+}
+
+fum_iterate_robber_barons = {
+	trigger = {
+		has_variable = fum_pru_robber_barons_months
+	}
+	effect = {
+		change_variable = {
+			name = fum_pru_robber_barons_months
+			add = 1
+		}
+	}
+}
+
+# Stop robber barons on correct date
+fum_stop_robber_barons = {
+	trigger = {
+		has_variable = fum_pru_robber_barons_months
+		var:fum_pru_robber_barons_months >= 21
+	}
+	effect = {
+		var:fum_pru_robber_barons_target ?= {
+			remove_province_modifier = PRU_robber_barons
+		}
+	}
+}
+
+# Gives max meritocracy progress to every owned location bordering the east_asia or
+# south_asia sub-continents. Only runs in europe-centric mode, where Asia is wiped
+# and meritocracy can no longer spawn naturally. Fires once at >= 1390.
+fum_meritocracy_spread = {
+	trigger = {
+		has_global_variable = fum__europe_centric_setting
+		NOT = { has_global_variable = fum_meritocracy_spread_done }
+		current_year >= 1390
+	}
+	effect = {
+		set_global_variable = fum_meritocracy_spread_done
+		fum_apply_meritocracy_spread = yes
+	}
+}
+
+fum_character_culling = {
+	trigger = {
+		has_global_variable = fum__character_culling_setting
+	}
+	effect = {
+		fum_cull_characters = yes
+	}
+}
+
+on_game_start_after_lobby = {
+	on_actions = {
+		fum_game_setup
+	}
+}
+
+fum_game_setup = {
+	effect = {
+		remove_from_global_variable_map = {
+			name = cmm
+			key = flag:fum__enable_save_game_compatability
+		}
+		add_to_global_variable_map = {
+			name = cmm
+			key = flag:fum__enable_save_game_compatability
+			value = 0
+		}
+	}
+}
+
+fum_clear_situations = {
+	trigger = {
+		is_ai = no
+		is_situation_active = situation:great_pestilence
+		or = {
+			has_global_variable = fum__remove_low_importance_setting
+			has_global_variable = fum__europe_centric_setting
+			has_global_variable = fum__asia_centric_setting
+		}
+	}
+	effect = {
+		end_situation = situation:great_pestilence
+	}
+}
+
+
