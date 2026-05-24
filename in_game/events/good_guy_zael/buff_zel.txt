@@ -48,17 +48,11 @@ buff_zel.1 = { #arborea buff
 		}
 		province_definition:cagliari_province = {
 			every_location_in_province_definition = {
-				limit = {
-					owner = c:ARA
-				}
 				add_core = c:ARB
 			}
 		}
 		province_definition:gallura_province = {
 			every_location_in_province_definition = {
-				limit = {
-					owner = c:ARA
-				}
 				add_core = c:ARB
 			}
 		}
@@ -190,10 +184,67 @@ buff_zel.4 = { #Gurgan buff
         10 = happy
         10 = interior
     }
+
+	immediate = {
+		create_character = {
+			dynasty = dynasty:borjigin_dynasty
+			birth_date = 1319.5.13
+			adm = { 33 100 }
+			dip = { 33 100 }
+			mil = { 33 100 }
+			father = root.ruler
+			mother = root.consort
+			estate = estate_type:crown_estate
+		}
+		create_character = {
+			dynasty = dynasty:borjigin_dynasty
+			birth_date = 1324.2.3
+			adm = { 33 100 }
+			dip = { 33 100 }
+			mil = { 33 100 }
+			father = root.ruler
+			mother = root.consort
+			estate = estate_type:crown_estate
+		}
+		create_character = {
+			dynasty = dynasty:borjigin_dynasty
+			birth_date = 1332.9.1
+			adm = { 33 100 }
+			dip = { 33 100 }
+			mil = { 33 100 }
+			father = root.ruler
+			mother = root.consort
+			estate = estate_type:crown_estate
+		}
+	}
 	
 	option = {
 		name = buff.1.a
 		
+		province_definition:rey_province = {
+			every_location_in_province_definition = {
+				limit = {
+					owner = c:BDS
+				}
+				add_core = c:GRG
+			}
+		}
+		province_definition:qazvin_province = {
+			every_location_in_province_definition = {
+				limit = {
+					owner = c:BDS
+				}
+				add_core = c:GRG
+			}
+		}
+		province_definition:rustamdar_province = {
+			every_location_in_province_definition = {
+				limit = {
+					owner = c:BDS
+				}
+				add_core = c:GRG
+			}
+		}
 		add_gold = {
 			value = 1000
 		}
