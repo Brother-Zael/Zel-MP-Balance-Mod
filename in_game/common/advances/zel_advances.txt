@@ -743,20 +743,20 @@ zel_grg_last_borjigin = {
 ############################
 # age_2_renaissance (1337-1437)
 ############################
+zel_grg_grazelands = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = GRG }
+    requires = fertile_lands
+    
+    global_monthly_food_modifier = 0.1
+}
+
 zel_grg_horses = {
     age = age_2_renaissance
     potential = { has_or_had_tag = GRG }
     requires = zel_grg_grazelands
 
     army_light_cavalry_power = 0.2
-}
-
-zel_grg_grazelands = {
-    age = age_2_renaissance
-    potential = { has_or_had_tag = GRG }
-    requires = fertile_lands
-    
-    food_production = 0.1
 }
 
 zel_grg_original_timur = {
@@ -773,7 +773,7 @@ zel_grg_original_timur = {
 zel_grg_shia_converts = {
     age = age_3_discovery
     potential = { has_or_had_tag = GRG }
-    requires = global_clergy_max_literacy_advance
+    requires = islamic_schoolars
 
     monthly_towards_mysticism = 0.2
     monthly_towards_humanist = 0.2

@@ -44,7 +44,7 @@ buff_zel.1 = { #arborea buff
 		name = buff.1.a
 		
 		add_gold = {
-			value = 1000
+			value = 2000
 		}
 		province_definition:cagliari_province = {
 			every_location_in_province_definition = {
@@ -107,7 +107,7 @@ buff_zel.2 = { #Frisia buff
 		name = buff.1.a
 		
 		add_gold = {
-			value = 1000
+			value = 1500
 		}
 	}
 }
@@ -157,7 +157,7 @@ buff_zel.3 = { #Strassburg buff
 		name = buff.1.a
 		
 		add_gold = {
-			value = 300
+			value = 500
 		}
 	}
 }
@@ -257,7 +257,7 @@ buff_zel.4 = { #Gurgan buff
 			}
 		}
 		add_gold = {
-			value = 1000
+			value = 1500
 		}
 	}
 }
@@ -327,7 +327,7 @@ buff_zel.5 = { #Oman buff
 		name = buff.1.a
 		
 		add_gold = {
-			value = 1000
+			value = 1750
 		}
 	}
 }
@@ -359,7 +359,7 @@ buff_zel.6 = { #Sindh buff
 		name = buff.1.a
 		
 		add_gold = {
-			value = 500
+			value = 2000
 		}
 	}
 }
@@ -394,7 +394,7 @@ buff_zel.7 = { #Mai buff
 		name = buff.1.a
 		
 		add_gold = {
-			value = 750
+			value = 1000
 		}
 		location:bay = {
 			if = {
@@ -447,7 +447,7 @@ buff_zel.8 = { #Aceh buff
 		name = buff.1.a
 		
 		add_gold = {
-			value = 1000
+			value = 1500
 		}
 		location:bandar_aceh = {
 			if = {
