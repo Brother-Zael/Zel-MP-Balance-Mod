@@ -48,6 +48,9 @@ zel_flavor_ser.1 = { #Novo Brdo grows
 				change_max_raw_material_workers = 4
 			}
 		}
+		add_gold = {
+			value = 100
+		}
 	}
 
 }
