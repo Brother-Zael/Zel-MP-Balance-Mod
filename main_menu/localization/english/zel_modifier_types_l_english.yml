@@ -5,3 +5,5 @@
  MODIFIER_TYPE_DESC_allow_burmese_autocracy: "Unlocks the Burmese Autocracy Government Reform"
  MODIFIER_TYPE_NAME_allow_sword_of_islam: "Become The Sword of Islam"
  MODIFIER_TYPE_DESC_allow_sword_of_islam: "Unlocks the Sword of Islam Government Reform"
+ MODIFIER_TYPE_NAME_allow_ect_reform: "Allow Early Continental Trade Reform"
+ MODIFIER_TYPE_DESC_allow_ect_reform: "Unlocks the Early Continental Trade Government Reform"

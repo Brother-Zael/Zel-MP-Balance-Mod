@@ -9,3 +9,7 @@ allow_burmese_autocracy = {
 allow_sword_of_islam = {
 	positive = "gfx/interface/icons/modifier_types/call_jihad_cost_modifier.dds"
 }
+
+allow_ect_reform = {
+	positive = "gfx/interface/icons/modifier_types/global_road_building_time.dds"
+}

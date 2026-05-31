@@ -214,3 +214,14 @@ REPLACE:legacy_of_genghis = {
 
 	years = 2
 }
+
+early_continental_trade = {
+	potential = {
+		modifier:allow_ect_reform = yes
+		num_of_non_rural = 3
+	}
+	country_modifier = {
+		trade_land_efficiency = 0.5
+		free_building_levels = 25
+	}
+}

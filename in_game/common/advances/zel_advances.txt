@@ -7,7 +7,7 @@ zel_fri_haadlingen = {
 	potential = { has_or_had_tag = FRI }
     requires = abolished_serfdom
 
-    nobles_estate_max_tax = 0.1
+    burghers_estate_max_tax = 0.1
 }
 
 zel_fri_upstallesbam = {
@@ -777,4 +777,281 @@ zel_grg_shia_converts = {
 
     monthly_towards_mysticism = 0.2
     monthly_towards_humanist = 0.2
+}
+
+############################
+# age_4_reformation (1537-1637)
+############################
+zel_grg_new_war = {
+    age = age_4_reformation
+    potential = { has_or_had_tag = GRG }
+    requires = unlock_heavy_lancers_advance
+
+    army_heavy_cavalry_maintenance_cost_modifier = -0.33
+    global_hostile_attrition = 0.25
+}
+
+############################
+# age_5_absolutism (1637-1737)
+############################
+zel_grg_obey_khan = {
+    age = age_5_absolutism
+    potential = { has_or_had_tag = GRG }
+    requires = government_size_absolutism
+
+    monthly_rebel_growth = -0.001
+}
+
+# ILKHANAN ADVANCES
+############################
+# age_4_reformation (1537-1637)
+############################
+zel_ilk_guns = {
+    age = age_4_reformation 
+    potential = { has_or_had_tag = ILK }
+    requires = unlock_chambered_cannon_advance
+
+    siege_ability = 0.2
+}
+
+# STRASSBOURG ADVANCES
+
+############################
+# age_1_traditions (1337)
+############################
+
+zel_sfc_ect = {
+    age = age_1_traditions
+    potential = {
+        has_or_had_tag = SFC
+    }
+    requires = guilds
+
+    allow_ect_reform = yes
+}
+
+zel_sfc_trade_realm = {
+    age = age_1_traditions
+    potential = {
+        has_or_had_tag = SFC
+    }
+    requires = zel_sfc_ect
+
+    global_trade_center_power = 0.05
+}
+
+zel_sfc_protection = {
+    age = age_1_traditions
+    potential = {
+        has_or_had_tag = SFC
+    }
+    requires = zel_sfc_trade_realm
+
+    hire_mercenary_premium_cost_modifier = -0.2
+}
+
+############################
+# age_2_renaissance (1337-1437)
+############################
+
+zel_sfc_expand_trade_I = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = SFC }    
+    requires = entrepot_advance
+
+    hills_proximity_impact = -0.1
+}
+
+zel_sfc_expand_trade_II = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = SFC }    
+    requires = zel_sfc_expand_trade_I
+
+    trade_range = 200
+}
+
+############################
+# age_3_discovery (1437-1537)
+############################
+
+zel_sfc_ties = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = SFC }
+    requires = printing_press_shop_advance
+
+    diplomatic_reputation = 2
+}
+
+zel_sfc_prestige = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = SFC }
+    requires = zel_sfc_ties
+
+    monthly_prestige = 0.05
+}
+
+############################
+# age_4_reformation (1537-1637)
+############################
+
+zel_sfc_imperial_city = {
+    age = age_4_reformation
+    potential = { has_or_had_tag = SFC }
+    requires = crown_power_advance_reformation
+
+    court_spending_cost_modifier = -0.05
+    tolerance_heretic = 1
+    global_max_literacy = 0.05
+}
+
+# DALI ADVANCES
+
+############################
+# age_1_traditions (1337)
+############################
+zel_cdl_pragmatism = {
+    age = age_1_traditions
+    potential = {
+        has_or_had_tag = CDL
+        culture = culture:bai_culture
+    }
+    requires = government_sanctioned_celebrations
+
+    cultures_capacity = 2
+}
+
+zel_cdl_gansu = {
+    age = age_1_traditions
+    potential = {
+        has_or_had_tag = CDL
+        culture = culture:bai_culture
+    }
+    requires = zel_cdl_pragmatism
+
+    monthly_towards_sinicized = 0.2
+}
+
+zel_cdl_mountains = {
+    age = age_1_traditions
+    potential = { has_or_had_tag = CDL }
+    requires = rural_rgo_traditions
+
+    mountains_proximity_impact = -0.33
+    hills_proximity_impact = -0.33
+    plateau_proximity_impact = -0.15
+}
+
+###############################
+# age_2_renaissance (1337-1437)
+###############################
+zel_cdl_duan_dali = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = CDL }
+    requires = local_nobility
+
+    stability_investment = 0.02
+    global_hostile_attrition = 0.25
+}
+
+zel_cdl_yuan_tusi = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = CDL }
+    requires = zel_cdl_duan_dali
+
+    army_heavy_infantry_power = 0.15
+}
+
+############################
+# age_3_discovery (1437-1537)
+############################
+zel_cdl_dali_marble = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = CDL }
+    requires = trading_hub_advance
+
+    marble_used_for_minting = yes
+    global_marble_output_modifier = 0.2
+}
+
+############################
+# age_5_absolutism (1637-1737)
+############################
+zel_cdl_kongque_dan = {
+    age = age_5_absolutism
+    potential = { has_or_had_tag = CDL }
+    requires = opera_house_advance
+
+    cultural_influence_modifier = 0.5
+}
+
+# LUWU ADVANCES
+
+############################
+# age_1_traditions (1337)
+############################
+zel_luw_la_galigo = {
+    age = age_1_traditions
+    potential = { has_or_had_tag = LUW }
+    requires = diplomatic_capacity_traditions
+ 
+    court_spending_cost_modifier = -0.05
+}
+
+zel_luw_bugi_coalition = {
+    age = age_1_traditions
+    potential = { has_or_had_tag = LUW }
+    requires = indonesia_outer_islands_archipelago
+ 
+    cultures_capacity = 0.5
+    diplomatic_capacity = 1
+}
+
+###############################
+# age_2_renaissance (1337-1437)
+###############################
+zel_luw_iron_traders = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = LUW }
+    requires = riches_of_asia
+
+    global_iron_output_modifier = 0.1
+}
+
+zel_luw_bone_warriors = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = LUW }
+    requires = zel_luw_iron_traders
+
+    discipline = 0.03
+}
+
+############################
+# age_3_discovery (1437-1537)
+############################
+zel_luw_coastal_people = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = LUW }
+    requires = maritime_decay_advance_disc
+
+    global_maritime_presence_modifier = 0.2
+}
+
+zel_luw_majapahit = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = LUW }
+    requires = unlock_caravel_advance
+
+    navy_light_ship_power = 0.5
+    navy_tradition_decay = 0.001
+}
+
+############################
+# age_4_reformation (1537-1637)
+############################
+zel_luw_islamic_sulawessi = {
+    age = age_4_reformation
+    potential = { has_or_had_tag = LUW }
+    requires = clergy_rights_laws_advance
+
+    global_pop_conversion_speed = 40
 }

@@ -18,3 +18,10 @@ allow_sword_of_islam = {
 		category = country
 	}
 }
+
+allow_ect_reform = {
+	boolean = yes
+	game_data = {
+		category = country
+	}
+}
