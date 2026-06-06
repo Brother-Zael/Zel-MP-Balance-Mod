@@ -29,3 +29,11 @@ zel_ser_nov_mine = {
 	}
 	local_max_rgo_size = 4
 }
+
+# Zel Base province increase buff
+REPLACE:province_base = {
+	game_data = {
+		category = province
+	}
+	province_integration_speed = 0.5
+}
