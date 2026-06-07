@@ -1,4 +1,4 @@
-REPLACE:ILK_f = {
+﻿REPLACE:ILK_f = {
 
 	level = 4
 	required_locations_fraction = 0.4 # 818 total locations

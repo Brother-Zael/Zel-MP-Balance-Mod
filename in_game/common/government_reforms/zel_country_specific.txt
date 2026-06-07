@@ -221,9 +221,7 @@ early_continental_trade = {
 		num_of_non_rural = 3
 	}
 	country_modifier = {
-		trade_land_efficiency = 0.5
-		scope:capital = {
-			free_building_levels = 100
-		}
+		trade_land_efficiency = 0.2
+		free_building_levels = 25
 	}
 }
