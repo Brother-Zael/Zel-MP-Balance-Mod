@@ -1053,5 +1053,90 @@ zel_luw_islamic_sulawessi = {
     potential = { has_or_had_tag = LUW }
     requires = clergy_rights_laws_advance
 
-    global_pop_conversion_speed = 40
+    global_pop_conversion_speed = 0.4
+}
+
+# HESSE ADVANCES
+
+############################
+# age_1_traditions (1337)
+############################
+zel_neu_towns = {
+    age = age_1_traditions
+    potential = { has_or_had_tag = HES }
+    requires = cultural_acceptance_advance
+
+    town_upgrade_cost_modifier = -0.1
+    city_upgrade_cost_modifier = -0.1
+}
+
+
+zel_repopulation = {
+    age = age_1_traditions
+    potential = { has_or_had_tag = HES }
+    requires = zel_neu_towns
+
+    global_population_growth = 0.0001
+    global_migration_attraction = 0.25
+}
+
+zel_fachwerkhaus = {
+    age = age_1_traditions
+    potential = { has_or_had_tag = HES }
+    requires = zel_repopulation
+
+    global_build_buildings_cost = -0.1
+}
+
+###############################
+# age_2_renaissance (1337-1437)
+###############################
+zel_hessian_military_tradition = {
+    age = age_2_renaissance 
+    potential = { has_or_had_tag = HES }
+    requires = war_no_cb_cost_modifier_renaissance_advance
+
+    army_tradition_decay = -0.001
+}
+
+zel_hessian_expansion  = {
+    age = age_2_renaissance
+    potential = { has_or_had_tag = HES }
+    requires = zel_hessian_military_tradition
+
+    global_integration_speed_modifier = 0.1
+    fort_maintenance_cost = -0.2
+}
+
+############################
+# age_3_discovery (1437-1537)
+############################
+zel_hessian_wars = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = HES }
+    requires = standardized_pikes
+
+    monthly_war_exhaustion = -0.05
+    army_heavy_infantry_power = 0.1
+}
+
+zel_hessian_mercenaries = {
+    age = age_3_discovery
+    potential = { has_or_had_tag = HES }
+    requires = zel_hessian_wars
+
+    hire_mercenary_premium_cost_modifier = -0.25
+    global_mercenaries_modifier = 0.25
+}
+
+############################
+# age_4_reformation (1537-1637)
+############################
+zel_hessian_league = {
+    age = age_4_reformation
+    potential = { has_or_had_tag = HES }
+    requires = crown_power_advance_reformation
+
+    tolerance_own = 2
+    diplomatic_reputation = 2
 }
