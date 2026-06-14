@@ -1,7 +1,13 @@
 ﻿l_english:
+  #Generic Advances
  supply_depot_advance_age_1_traditions: "Supply Depot Zel"
  supply_depot_advance_age_1_traditions_desc: "LET THERE BE FOOD IN THINE DEPOTS"
+ zel_mon_prox: "Sheriffs and Sharifs"
+ zel_mon_prox_desc: "To a feudal lord, one king is much the same as another. To a conquering monarch, the feudal lords are the keys to the land - control them, and all else will soon follow."
+ zel_bigboi_prox: "Couriers and Courtiers"
+ zel_bigboi_prox_desc: "Keep the court close, and the country follows."
 
+  #National Advances
  zel_fri_haadlingen: "Haadlingen"
  zel_fri_haadlingen_desc: "Frisia's nobles were little more than petty chieftans and village heads who held no hereditary rights and could only maintain what they could manage to hold in life. Weaker than in other lands, it is much easier to return the wealth hoarded by these individuals back to the people."
  zel_fri_upstallesbam: "Revive the Upstallesbam"

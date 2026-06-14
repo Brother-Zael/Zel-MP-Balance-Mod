@@ -1,0 +1,41 @@
+﻿############################
+# age_1_traditions (1337)
+############################
+
+zel_mon_prox = {
+	age = age_1_traditions
+	government = monarchy
+	requires = scholasticism
+
+	global_integration_speed_modifier = 0.1
+}
+
+############################
+# age_2_renaissance (1337-1437)
+############################
+
+
+
+############################
+# age_3_discovery (1437-1537)
+############################
+
+
+
+############################
+# age_4_reformation (1537-1637)
+############################
+
+
+
+############################
+# age_5_absolutism (1637-1737)
+############################
+
+zel_bigboi_prox = {
+	age = age_5_absolutism
+	potential = { country_rank_level > 2 }
+	requires = government_size_absolutism
+	
+	global_integration_speed_modifier = 0.1
+}

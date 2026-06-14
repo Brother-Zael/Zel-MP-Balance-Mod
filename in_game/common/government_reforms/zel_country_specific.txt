@@ -225,3 +225,58 @@ early_continental_trade = {
 		free_building_levels = 25
 	}
 }
+
+#replaces Vij
+REPLACE:vij_astadiggajas = {
+	potential = {
+		has_unlocked_government_reform_trigger = { type = vij_astadiggajas }
+	}
+	country_modifier = {
+		num_possible_artists = 2
+		skill_of_new_artists = 0.05
+		global_monthly_literacy = 0.02
+		government_reform_slots = 1
+	}
+	years = 1
+}
+
+REPLACE:dutch_republic_reform = {
+	major = yes
+	unique = yes
+	potential = {
+		has_or_had_tag = NED
+	}
+	allow = {
+		has_embraced_institution = institution:legalism
+		government_type = government_type:republic
+	}
+	country_modifier = {
+		export_efficiency = small_trade_efficiency_bonus
+		navy_heavy_ship_power = 0.05
+		subject_loyalty = 10
+		monthly_towards_plutocracy = societal_value_monthly_move
+		monthly_towards_free_trade = societal_value_minor_monthly_move
+		global_burghers_estate_power = 0.1
+		trade_sea_efficiency = 0.30
+		government_reform_slots = 1
+	}
+	years = 2
+}
+
+#Bengali
+zel_bng_sultanate = {
+	major = yes
+	unique = yes
+	government = monarchy
+	potential = {
+		has_or_had_tag = BNG
+	}
+
+	country_modifier = {
+		government_reform_slots = 1
+		global_pop_conversion_speed = 0.01
+		tolerance_heathen = 3
+		army_light_infantry_power = 0.1
+		global_dhimmi_estate_power = 0.5
+	}
+}

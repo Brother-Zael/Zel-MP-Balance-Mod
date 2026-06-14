@@ -24,7 +24,7 @@
 	flag = ILK
 	adjective = ILK_ADJ
 	tag = ILK
-	color = map_ILK
+	color = map_zILK
 	
 	regions = {
 		persia_region
@@ -41,5 +41,278 @@
 	}
 	form_effect = {
 		destroy_international_organization = { target = international_organization:ilkhanate }
+	}
+}
+
+#Zael Empire of the Indus
+zIND_f = {
+	level = 4
+	required_locations_fraction = 0.66
+	potential_requires_own = yes
+	rule = plausible
+	potential = {
+		NOT = { has_or_had_tag = DLH }
+		OR = {
+			culture = { has_culture_group = culture_group:indo_aryan_group }
+			culture = culture:afghani
+			culture = culture:baloch
+		}
+	}
+	allow = {
+		owns = location:thatta
+		owns = location:kashmore
+		owns = location:multan
+		OR = {
+			owns = location:pindi_gheb
+			owns = location:jalandhar
+		}
+	}
+
+	name = zIND
+	flag = zIND
+	adjective = zIND_ADJ
+	tag = zIND
+	color = map_zIND
+
+	areas = {
+		sindh_area
+		punjab_area
+	}
+
+	form_effect = {
+		if = {
+			limit = { country_rank_level < 4 }
+			set_country_rank_effect = { rank = country_rank:rank_empire }
+		}
+	}
+}
+
+#Zael Burma
+zBRM_f = {
+	level = 4
+	required_locations_fraction = 0.75
+	potential_requires_own = yes
+	rule = plausible
+	potential = {
+		culture = culture:burmese
+	}
+	allow = {
+		OR = {
+			owns = location:pegu
+			owns = location:lai_hka
+			owns = location:katha
+		}
+		owns = location:pagan
+	}
+
+	name = zBRM
+	flag = zBRM
+	adjective = zBRM_ADJ
+	tag = zBRM
+	color = map_zBRM
+
+	areas = {
+		kachin_area
+		irrawady_area
+		shan_highland_area
+	}
+	provinces = {
+		naga_province
+		manipur_province
+		chin_province
+		southern_arakhan_province
+		pathein_province
+		myaungmya_province
+		pegu_province
+		thaton_province
+		martaban_province
+	}
+
+	form_effect = {
+		if = {
+			limit = { country_rank_level < 4 }
+			set_country_rank_effect = { rank = country_rank:rank_empire }
+		}
+	}
+}
+
+#Zael Smol Philippines
+zFIL_f = {
+	level = 3
+	required_locations_fraction = 0.33
+	potential_requires_own = yes
+	capital_required = yes
+	rule = plausible
+	potential = {
+		
+	}
+	allow = {
+		
+	}
+
+	name = zFIL
+	flag = zFIL
+	adjective = zFIL_ADJ
+	tag = zFIL
+	color = map_zFIL
+
+	areas = {
+		luzon_area
+		visayas_area
+		mindanao_area
+	}
+
+	form_effect = {
+		if = {
+			limit = { country_rank_level < 3 }
+			set_country_rank_effect = { rank = country_rank:rank_kingdom }
+		}
+	}
+}
+
+#Zael Big Non-Abrahamic Philippines
+zFLP_f = {
+	level = 4
+	required_locations_fraction = 0.9
+	potential_requires_own = yes
+	capital_required = yes
+	rule = plausible
+	potential = {
+		has_or_had_tag = zFIL
+		NOT = { religion.group = religion_group:christian }
+		NOT = { religion.group = religion_group:muslim }
+		NOT = { religion.group = religion_group:israelite_group }
+	}
+	allow = {
+		
+	}
+
+	name = zFLP
+	flag = zFLP
+	adjective = zFLP_ADJ
+	tag = zFLP
+	color = map_zFLP
+
+	areas = {
+		luzon_area
+		visayas_area
+		mindanao_area
+	}
+
+	form_effect = {
+		if = {
+			limit = { country_rank_level < 4 }
+			set_country_rank_effect = { rank = country_rank:rank_empire }
+		}
+	}
+}
+
+#Zael Big Non-Abrahamic Philippines
+zPHL_f = {
+	level = 4
+	required_locations_fraction = 0.9
+	potential_requires_own = yes
+	capital_required = yes
+	rule = plausible
+	potential = {
+		has_or_had_tag = zFIL
+		OR = {
+			religion.group = religion_group:christian
+			religion.group = religion_group:muslim
+			religion.group = religion_group:israelite_group
+		}
+	}
+	allow = {
+		
+	}
+
+	name = zPHL
+	flag = zPHL
+	adjective = zPHL_ADJ
+	tag = zPHL
+	color = map_zPHL
+
+	areas = {
+		luzon_area
+		visayas_area
+		mindanao_area
+	}
+
+	form_effect = {
+		if = {
+			limit = { country_rank_level < 4 }
+			set_country_rank_effect = { rank = country_rank:rank_empire }
+		}
+	}
+}
+
+#Zael Non-muslim Dravidian Deccan
+zKMK_f = {
+	level = 4
+	required_locations_fraction = 0.75
+	potential_requires_own = yes
+	capital_required = yes
+	rule = plausible
+	potential = {
+		culture = { has_culture_group = culture_group:dravidian_group }
+		NOT = { religion.group = religion_group:muslim }
+	}
+	allow = {
+		
+	}
+
+	name = zKMK
+	flag = zKMK
+	adjective = zKMK_ADJ
+	tag = zKMK
+	color = map_zKMK
+
+	regions = {
+		deccan_region
+	}
+
+	form_effect = {
+		if = {
+			limit = { country_rank_level < 4 }
+			set_country_rank_effect = { rank = country_rank:rank_empire }
+		}
+	}
+}
+
+#Zael Central India
+zHRJ_f = {
+	level = 4
+	required_locations_fraction = 0.75
+	potential_requires_own = yes
+	capital_required = yes
+	rule = plausible
+	potential = {
+		OR = {
+			culture = { has_culture_group = culture_group:dravidian_group }
+			culture = { has_culture_group = culture_group:indo_aryan_group }
+		}
+	}
+	allow = {
+		
+	}
+
+	name = zHRJ
+	flag = zHRJ
+	adjective = zHRJ_ADJ
+	tag = zHRJ
+	color = map_zHRJ
+
+	regions = {
+		central_india_region
+	}
+	areas = {
+		rajputana_area
+	}
+
+	form_effect = {
+		if = {
+			limit = { country_rank_level < 4 }
+			set_country_rank_effect = { rank = country_rank:rank_empire }
+		}
 	}
 }

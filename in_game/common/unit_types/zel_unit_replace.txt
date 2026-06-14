@@ -1,0 +1,13 @@
+﻿REPLACE:n_dhow = {
+	is_special = yes
+	category = navy_light_ship
+	copy_from = n_age_1_traditions_light_ship
+	upgrades_to = n_kilwan_dhow
+	buildable = yes
+
+	hull_size = -1
+	maritime_presence = ship_small_mid_maritime
+
+	maintenance_demand =  light_ship_1_maintenance
+	construction_demand = light_ship_1_construction
+}
