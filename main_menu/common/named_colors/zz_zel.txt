@@ -1,5 +1,5 @@
 ﻿colors = {
-	map_zILK = rgb { 220 138 57 }
+	map_zILK = rgb { 220 118 7 }
 	map_zIND = rgb { 25 148 108 }
 	map_zBRM = hsv360 { 352 71 91 }
 	map_zFIL = rgb { 219 50 15 }
