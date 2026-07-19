@@ -316,3 +316,39 @@ zHRJ_f = {
 		}
 	}
 }
+
+#Zael Thailand
+zTHA_f = {
+	level = 4
+	required_locations_fraction = 0.7
+	potential_requires_own = yes
+	capital_required = yes
+	rule = plausible
+	potential = {
+		culture = { has_culture_group = culture_group:thai_group }
+	}
+	allow = {
+		
+	}
+
+	name = zTHA
+	flag = zTHA
+	adjective = zTHA_ADJ
+	tag = zTHA
+	color = map_zTHA
+
+	areas = {
+		chao_phraya_area
+		irrawady_delta_area
+		northern_tai_highland_area
+		khorat_plateau_area
+		lower_mekong_area
+	}
+
+	form_effect = {
+		if = {
+			limit = { country_rank_level < 4 }
+			set_country_rank_effect = { rank = country_rank:rank_empire }
+		}
+	}
+}
